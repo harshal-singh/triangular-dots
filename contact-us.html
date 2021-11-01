@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangular Dots</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="css/aos.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            #our-details {
+                padding: 120px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 80px 20px;
+                /* color: #fff;
+                background-color: #242424; */
+            }
+
+            .singel-our-details {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .singel-our-details img {
+                margin-right: 18px;
+            }
+
+            .singel-our-details small {
+                font-weight: 500;
+            }
+
+            .singel-our-details h3 {
+                margin: 8px 0 18px 0;
+                font-size: 21px;
+            }
+
+            .singel-our-details p {
+                /* color: #dddddd; */
+                font-size: 15px;
+                line-height: 1.6;
+                font-weight: lighter;
+                margin-bottom: 24px;
+            }
+
+            .singel-our-details a,
+            .singel-our-details h1 {
+                height: 30px;
+                display: block;
+            }
+
+            .note {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                /* color: #dddddd; */
+                font-size: 13px;
+                margin-top: 24px;
+                padding-top: 20px;
+                border-top: 1px solid #c5c5c5;
+            }
+
+            .note img {
+                margin-right: 12px;
+            }
+
+            #message {
+                margin: 120px;
+            }
+
+            #message form {
+                display: flex;
+                flex-direction: column;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            form input,
+            form textarea {
+                outline: none;
+                padding: 16px;
+                border: 1px solid #c5c5c5;
+                margin: 24px 0;
+            }
+
+            form div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            form div input {
+                width: 48%;
+            }
+
+            #send-message {
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 24px;
+                background-color: transparent;
+            }
+
+            #back-to-homepage {
+                width: 100%;
+                display: block;
+                padding: 56px 0;
+                text-align: center;
+                background-color: #c5c5c5;
+            }
+
+            footer {
+                margin-top: 0 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="navigation"></div>
+
+            <section class="page-heading">
+                <h1 data-aos="fade-in">Contact us</h1>
+            </section>
+
+            <section id="our-details">
+                <div>
+                    <div class="singel-our-details" data-aos="fade-up">
+                        <img src="https://via.placeholder.com/64x64" alt="" />
+                        <div>
+                            <small>Hours</small>
+                            <h3>Working hours</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
+                                commodi cumque dolore.
+                            </p>
+                            <h1>09-18h</h1>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <img src="https://via.placeholder.com/24x24" alt="" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="singel-our-details" data-aos="fade-up">
+                        <img src="https://via.placeholder.com/64x64" alt="" />
+                        <div>
+                            <small>Direct</small>
+                            <h3>Our call center</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
+                                commodi cumque dolore.
+                            </p>
+                            <a href="#">→ &nbsp; Call us via Skype</a>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <img src="https://via.placeholder.com/24x24" alt="" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="singel-our-details" data-aos="fade-up">
+                        <img src="https://via.placeholder.com/64x64" alt="" />
+                        <div>
+                            <small>Direct</small>
+                            <h3>Our location</h3>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
+                                commodi cumque dolore.
+                            </p>
+                            <a href="#">→ &nbsp; Get location</a>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <img src="https://via.placeholder.com/24x24" alt="" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
+                    </div>
+                </div>
+            </section>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.34734976107!2d72.82915310000001!3d19.1362669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63cf4f29961%3A0xd12a436b2a3b3e4b!2sTriangular%20Dots%20Creative%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1635530721250!5m2!1sen!2sin"
+                width="100%"
+                height="480"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+            ></iframe>
+
+            <section id="message">
+                <div class="heading" data-aos="slide-up">
+                    <h2>Send us a message</h2>
+                </div>
+                <form data-aos="slide-up">
+                    <div>
+                        <input type="text" name="username" id="username" placeholder="Your full name" />
+                        <input type="email" name="useremail" id="useremail" placeholder="Your e-mail address" />
+                    </div>
+                    <input type="url" name="userwebsiteurl" id="userwebsiteurl" placeholder="Your website / URL" />
+                    <textarea
+                        name="usermessage"
+                        id="usermessage"
+                        cols="30"
+                        rows="10"
+                        placeholder="Write your message here"
+                    ></textarea>
+                    <button id="send-message">Send message</button>
+                </form>
+            </section>
+
+            <a href="/triangular-dots" id="back-to-homepage">→ &nbsp; Back to Homepage</a>
+
+            <div class="footer"></div>
+        </main>
+
+        <!-- script -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            $(".navigation").load("templates/nav.html");
+            $(".footer").load("templates/footer.html");
+        </script>
+    </body>
+</html>

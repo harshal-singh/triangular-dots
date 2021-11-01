@@ -1,0 +1,44 @@
+<nav>
+    <div id="logo">Triangular Dots</div>
+    <div id="nav-links">
+        <a href="/triangular-dots">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Our Works</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="#">Case Studies</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+    </div>
+</nav>
+
+<style>
+    nav {
+        z-index: 11111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 80px;
+        background-color: transparent;
+        transition: 500ms ease;
+    }
+
+    nav.sticky {
+        padding: 25px 80px;
+        background-color: #fff;
+        box-shadow: 0px 10px 40px rgb(0 0 0 / 10%);
+    }
+
+    #logo {
+        font-weight: 600;
+    }
+
+    #nav-links a {
+        display: inline-block;
+        font-size: 15px;
+        margin-left: 16px;
+    }
+</style>

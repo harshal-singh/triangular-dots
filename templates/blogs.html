@@ -1,0 +1,95 @@
+<section id="blogs">
+    <div class="heading" data-aos="slide-up">
+        <h2>Our Blogs</h2>
+    </div>
+    <div id="all-blogs">
+        <div class="single-blogs" data-aos="slide-up" data-aos-offset="200">
+            <div class="blog-image">
+                <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+            </div>
+            <div class="blog-text">
+                <small>Personal / June 13, 2021</small>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <a href="#">→</a>
+            </div>
+        </div>
+        <div class="single-blogs" data-aos="slide-up" data-aos-offset="200" data-aos-delay="100">
+            <div class="blog-image">
+                <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+            </div>
+            <div class="blog-text">
+                <small>Personal / June 13, 2021</small>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <a href="#">→</a>
+            </div>
+        </div>
+        <div class="single-blogs" data-aos="slide-up" data-aos-offset="200" data-aos-delay="200">
+            <div class="blog-image">
+                <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+            </div>
+            <div class="blog-text">
+                <small>Personal / June 13, 2021</small>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <a href="#">→</a>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    /* our blog */
+    #blogs {
+        margin: 100px 120px 180px 120px;
+    }
+
+    #all-blogs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .single-blogs {
+        position: relative;
+        width: 400px;
+        height: 260px;
+    }
+
+    .blog-image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .b-image {
+        width: 100%;
+        height: 100%;
+        transition: all 800ms ease;
+    }
+
+    .single-blogs:hover .b-image {
+        transform: scale(1.2);
+    }
+
+    .blog-text {
+        width: 90%;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        padding: 28px 20px;
+        border-radius: 10px;
+        border-bottom-right-radius: 60px;
+        transform: translateX(-50%);
+        max-width: fit-content;
+        background-color: #fff;
+        box-shadow: 0 12px 48px rgba(0 0 0 / 10%);
+    }
+
+    .blog-text h3 {
+        margin: 16px 0 20px 0;
+    }
+
+    .blog-text a {
+        font-size: 24px;
+        font-weight: 600;
+    }
+</style>
