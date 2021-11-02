@@ -2,10 +2,19 @@
     <div id="logo">Triangular Dots</div>
     <div id="nav-links">
         <a href="/triangular-dots">Home</a>
-        <a href="#">Services</a>
+        <details>
+            <summary>Services</summary>
+            <div>
+                <a href="single-service.html">Service 1</a><br />
+                <a href="single-service.html">Service 2</a><br />
+                <a href="single-service.html">Service 3</a><br />
+                <a href="single-service.html">Service 4</a><br />
+                <a href="single-service.html">Service 5</a><br />
+            </div>
+        </details>
         <a href="our-work.html">Our Works</a>
         <a href="blogs.html">Blogs</a>
-        <a href="#">Case Studies</a>
+        <a href="case-studies.html">Case Studies</a>
         <a href="about-us.html">About Us</a>
         <a href="contact-us.html">Contact Us</a>
     </div>
@@ -40,5 +49,25 @@
         display: inline-block;
         font-size: 15px;
         margin-left: 16px;
+    }
+
+    details {
+        cursor: pointer;
+        margin-left: 16px;
+        display: inline;
+    }
+
+    details div {
+        top: 68px;
+        position: fixed;
+        padding-right: 16px;
+        background-color: #fff;
+        box-shadow: 0 12px 20px rgb(0 0 0 / 10%);
+    }
+
+    details div a {
+        padding: 10px;
+        padding-left: 4px;
+        border-bottom: 1px solid #c5c5c5;
     }
 </style>

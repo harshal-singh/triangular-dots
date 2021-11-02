@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangular Dots</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="css/aos.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            #case-studies {
+                margin: 64px 200px;
+            }
+
+            #filter-sort-search {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 64px;
+            }
+
+            #sort,
+            #filter {
+                outline: 0;
+                padding: 12px 16px;
+                border: 1px solid #c5c5c5;
+                text-transform: capitalize;
+                margin-right: 24px;
+            }
+
+            input {
+                width: 290px;
+                outline: 0;
+                padding: 12px 16px;
+                border: 1px solid #c5c5c5;
+                margin-right: 24px;
+            }
+
+            #all-case-study {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .single-case-study {
+                overflow: hidden;
+                text-align: left;
+                width: 345px;
+                margin-bottom: 40px;
+                border-radius: 10px;
+                border: 1px solid #c5c5c5;
+            }
+
+            .single-case-study div {
+                width: 100%;
+                height: 246px;
+                overflow: hidden;
+            }
+            .single-case-study img {
+                width: 100%;
+                height: 100%;
+                transform: scale(1);
+                transition: all 400ms ease;
+            }
+
+            .single-case-study:hover img {
+                transform: scale(1.2);
+            }
+
+            .single-case-study h4 {
+                font-size: 21px;
+                margin: 12px 0;
+                padding: 0 16px;
+            }
+
+            .single-case-study p {
+                padding: 0 16px 16px;
+            }
+
+            #load-more {
+                margin: 0 200px;
+                text-align: center;
+            }
+
+            #load-more div h2 {
+                margin: 80px 0 40px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="navigation"></div>
+
+            <section class="page-heading">
+                <h1 data-aos="fade-in">Our Case Studies</h1>
+            </section>
+
+            <section id="case-studies">
+                <div id="filter-sort-search">
+                    <div>
+                        <select name="sort" id="sort">
+                            <option value="sort option">sort option</option>
+                            <option value="latest">latest</option>
+                            <option value="oldest">oldest</option>
+                            <option value="a-z">a-z</option>
+                            <option value="z-a">z-a</option>
+                        </select>
+                        <select name="filter" id="filter">
+                            <option value="filter option">filter option</option>
+                            <option value="option 1">option 1</option>
+                            <option value="option 2">option 2</option>
+                            <option value="option 3">option 3</option>
+                            <option value="option 4">option 4</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="search" name="search" id="search" placeholder="Search for post here" />
+                        <button>Search</button>
+                    </div>
+                </div>
+                <div id="all-case-study">
+                    <a href="single-case-studies.html" class="single-case-study" data-aos="slide-up">
+                        <div>
+                            <img src="https://via.placeholder.com/325x264" alt="" />
+                        </div>
+                        <h4>Lorem ipsum dolor.</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
+                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
+                            cumque vel blanditiis illo earum at tempora nihil.
+                        </p>
+                    </a>
+                    <a href="single-case-studies.html" class="single-case-study" data-aos="slide-up">
+                        <div>
+                            <img src="https://via.placeholder.com/325x264" alt="" />
+                        </div>
+                        <h4>Lorem ipsum dolor.</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
+                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
+                            cumque vel blanditiis illo earum at tempora nihil.
+                        </p>
+                    </a>
+                    <a href="single-case-studies.html" class="single-case-study" data-aos="slide-up">
+                        <div>
+                            <img src="https://via.placeholder.com/325x264" alt="" />
+                        </div>
+                        <h4>Lorem ipsum dolor.</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
+                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
+                            cumque vel blanditiis illo earum at tempora nihil.
+                        </p>
+                    </a>
+                    <a href="single-case-studies.html" class="single-case-study" data-aos="slide-up">
+                        <div>
+                            <img src="https://via.placeholder.com/325x264" alt="" />
+                        </div>
+                        <h4>Lorem ipsum dolor.</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
+                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
+                            cumque vel blanditiis illo earum at tempora nihil.
+                        </p>
+                    </a>
+                    <a href="single-case-studies.html" class="single-case-study" data-aos="slide-up">
+                        <div>
+                            <img src="https://via.placeholder.com/325x264" alt="" />
+                        </div>
+                        <h4>Lorem ipsum dolor.</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
+                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
+                            cumque vel blanditiis illo earum at tempora nihil.
+                        </p>
+                    </a>
+                    <a href="single-case-studies.html" class="single-case-study" data-aos="slide-up">
+                        <div>
+                            <img src="https://via.placeholder.com/325x264" alt="" />
+                        </div>
+                        <h4>Lorem ipsum dolor.</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
+                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
+                            cumque vel blanditiis illo earum at tempora nihil.
+                        </p>
+                    </a>
+                </div>
+            </section>
+
+            <section id="load-more">
+                <button data-aos="fade-in">Load more....</button>
+
+                <div>
+                    <h2 data-aos="slide-up">Start telling people about your business.</h2>
+                    <span data-aos="slide-up">
+                        <button>Create an ad</button>
+                        <button>Create a page</button>
+                    </span>
+                </div>
+            </section>
+
+            <div class="footer"></div>
+        </main>
+
+        <!-- script -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            $(".navigation").load("templates/nav.html");
+            $(".footer").load("templates/footer.html");
+        </script>
+    </body>
+</html>
