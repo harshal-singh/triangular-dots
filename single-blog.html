@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangular Dots</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/aos.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            #blog-container {
+                margin: 120px;
+            }
+
+            #left {
+                padding-bottom: 28px;
+                margin-bottom: 80px;
+                border-bottom: 1px solid #5c5c5c;
+            }
+
+            #left img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            figcaption {
+                margin-top: 24px;
+            }
+
+            #left p {
+                line-height: 1.8;
+            }
+
+            #text li {
+                list-style-type: disc;
+                list-style-position: inside;
+                padding-left: 16px;
+            }
+
+            #text li a {
+                display: inline-block;
+                margin: 10px;
+                padding: 0 10px;
+            }
+
+            #text h2 {
+                margin: 48px 0 28px 0;
+            }
+
+            #text h3 {
+                margin: 48px 0 24px 0;
+                font-weight: 500;
+            }
+
+            small {
+                font-weight: 500;
+                padding: 6px 0;
+            }
+
+            #quote {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+                margin: 40px 0;
+                padding: 0 56px;
+                display: grid;
+                place-items: center;
+                background-color: #efefef;
+                border-left: 4px solid #5c5c5c;
+            }
+
+            #tags h3 {
+                margin-top: 36px;
+                margin-bottom: 16px;
+            }
+
+            /* our blog */
+            #blogs {
+                margin: 100px 120px 180px 120px;
+            }
+
+            #all-blogs {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .single-blogs {
+                position: relative;
+                width: 400px;
+                height: 260px;
+            }
+
+            .blog-image {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+
+            .b-image {
+                width: 100%;
+                height: 100%;
+                transition: all 800ms ease;
+            }
+
+            .single-blogs:hover .b-image {
+                transform: scale(1.2);
+            }
+
+            .blog-text {
+                width: 90%;
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                padding: 28px 20px;
+                border-radius: 10px;
+                border-bottom-right-radius: 60px;
+                transform: translateX(-50%);
+                max-width: fit-content;
+                background-color: #fff;
+                box-shadow: 0 12px 48px rgba(0 0 0 / 10%);
+            }
+
+            .blog-text h3 {
+                margin: 16px 0 20px 0;
+            }
+
+            .blog-text a {
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            #message {
+                margin: 120px;
+            }
+
+            #message form {
+                display: flex;
+                flex-direction: column;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            form input,
+            form textarea {
+                outline: none;
+                padding: 16px;
+                border: 1px solid #c5c5c5;
+                margin: 24px 0;
+            }
+
+            form div {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            form div input {
+                width: 48%;
+            }
+
+            #send-message {
+                width: fit-content;
+                margin: 0 auto;
+                margin-top: 24px;
+                background-color: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="navigation"></div>
+
+            <section class="page-heading">
+                <h1 data-aos="fade-in">Singel Blog Name</h1>
+            </section>
+
+            <section id="blog-container" data-aos="slide-up">
+                <div id="left">
+                    <figure>
+                        <img src="https://via.placeholder.com/760x325?text=blog+image" alt="" />
+                        <figcaption>
+                            <span id="user">👨‍💼 &nbsp;Admin</span> &nbsp;|&nbsp;
+                            <span id="date">📆 &nbsp;22 June, 2021</span>
+                        </figcaption>
+                    </figure>
+
+                    <div id="text">
+                        <h2>Web Development</h2>
+                        <p>
+                            We denounce with righteous indige nation and dislike men who are so beguiled and demo
+                            realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                            foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
+                            perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+                            untrammelled data structures manages data in technology.
+                        </p>
+                        <br />
+                        <p>
+                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
+                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
+                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
+                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium data structures
+                            manages data.
+                        </p>
+                        <div id="quote">
+                            <p>
+                                Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus
+                                stadium data structures manages data lingo est igpay.
+                            </p>
+                        </div>
+                        <p>
+                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
+                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
+                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
+                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium data structures
+                            manages data.
+                        </p>
+
+                        <h3>Digital Technology on The Cutting Edge</h3>
+                        <p>
+                            We denounce with righteous indige nation and dislike men who are so beguiled and demo
+                            realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                            foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
+                            perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+                            untrammelled data structures manages data in technology.
+                        </p>
+                        <br />
+                        <ul>
+                            <li><a href="#">How will digital activities impact traditional manufacturing.</a></li>
+                            <li><a href="#">All these digital elements and projects aim to enhance .</a></li>
+                            <li><a href="#">I monitor my staff with software that takes screenshots.</a></li>
+                            <li><a href="#">Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a></li>
+                            <li><a href="#">Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a></li>
+                        </ul>
+                    </div>
+                    <br />
+                    <p>
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                </div>
+
+                <div id="tags">
+                    <div>
+                        <h3>Categories</h3>
+                        <small>Digital marketing</small>
+                    </div>
+                    <div>
+                        <h3>Tags</h3>
+                        <small>Affiliate</small>
+                        <small>Process</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="message">
+                <div class="heading" data-aos="slide-up">
+                    <h2>Leave a Reply</h2>
+                </div>
+                <form data-aos="slide-up">
+                    <div>
+                        <input type="text" name="username" id="username" placeholder="Your full name" />
+                        <input type="email" name="useremail" id="useremail" placeholder="Your e-mail address" />
+                    </div>
+                    <input type="url" name="userwebsiteurl" id="userwebsiteurl" placeholder="Your website / URL" />
+                    <textarea
+                        name="usermessage"
+                        id="usermessage"
+                        cols="30"
+                        rows="10"
+                        placeholder="Write your reply here"
+                    ></textarea>
+                    <button id="send-message">Post comment</button>
+                </form>
+            </section>
+
+            <section id="blogs">
+                <div class="heading" data-aos="slide-up">
+                    <h2>You May Also Like</h2>
+                </div>
+                <div id="all-blogs">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-offset="200">
+                        <div class="blog-image">
+                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                        </div>
+                        <div class="blog-text">
+                            <small>Personal / June 13, 2021</small>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <a href="#">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs" data-aos="slide-up" data-aos-offset="200" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                        </div>
+                        <div class="blog-text">
+                            <small>Personal / June 13, 2021</small>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <a href="#">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs" data-aos="slide-up" data-aos-offset="200" data-aos-delay="200">
+                        <div class="blog-image">
+                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                        </div>
+                        <div class="blog-text">
+                            <small>Personal / June 13, 2021</small>
+                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <a href="#">→</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer"></div>
+        </main>
+
+        <!-- script -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            $(".navigation").load("templates/nav.html");
+            $(".footer").load("templates/footer.html");
+        </script>
+    </body>
+</html>
