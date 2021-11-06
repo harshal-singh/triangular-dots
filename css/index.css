@@ -125,6 +125,10 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
+#all-our-approachs img {
+    border: 1px solid #c5c5c5;
+}
+
 #all-our-approachs img:nth-child(even) {
     margin-top: 140px;
 }
