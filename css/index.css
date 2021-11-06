@@ -125,12 +125,28 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-#all-our-approachs img {
-    border: 1px solid #c5c5c5;
+#all-our-approachs div {
+    width: 265px;
+    height: 265px;
+    /* background-color: #eee; */
 }
 
-#all-our-approachs img:nth-child(even) {
+#all-our-approachs div:nth-child(even) {
     margin-top: 140px;
+}
+
+#all-our-approachs img {
+    width: 100%;
+    height: 100%;
+}
+
+#all-our-approachs img:first-child {
+    padding: 28px;
+}
+
+#all-our-approachs h4 {
+    margin: 16px 0;
+    text-align: center;
 }
 
 /* partner */
