@@ -32,79 +32,85 @@
                 <div class="heading" data-aos="slide-up">
                     <h2>Our Partners</h2>
                 </div>
-                <div id="all-our-partners">
-                    <img
-                        src="images/our-partners/1 Logo_Aashirvaad-1-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="5"
-                    />
-                    <img
-                        src="images/our-partners/2 Logo_AmbiPur-1-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="10"
-                    />
-                    <img
-                        src="images/our-partners/3 Logo_Ariel-1-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="15"
-                    />
-                    <img
-                        src="images/our-partners/4 Logo_Barista-1-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="20"
-                    />
-                    <img
-                        src="images/our-partners/5 Logo_Bru-1-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="25"
-                    />
-                    <img
-                        src="images/our-partners/6 Logo_Complan-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="30"
-                    />
-                    <img
-                        src="images/our-partners/7 Logo_Crompton-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="35"
-                    />
-                    <img
-                        src="images/our-partners/8 Logo_DesiAtta-1-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="40"
-                    />
-                    <img
-                        src="images/our-partners/9 Logo_Everyuth-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="45"
-                    />
-                    <img
-                        src="images/our-partners/10 Logo_Indulekha-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="50"
-                    />
-                    <img
-                        src="images/our-partners/11 Logo_Lakme-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="55"
-                    />
-                    <img
-                        src="images/our-partners/12 Logo_Nescafe-300x169 E.jpg"
-                        alt=""
-                        data-aos="fade"
-                        data-aos-delay="60"
-                    />
+                <div id="all-our-partners" class="swiper partnerSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/1 Logo_Aashirvaad-1-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="5"
+                            />
+                            <img
+                                src="images/our-partners/2 Logo_AmbiPur-1-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="10"
+                            />
+                            <img
+                                src="images/our-partners/3 Logo_Ariel-1-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="15"
+                            />
+                            <img
+                                src="images/our-partners/4 Logo_Barista-1-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="20"
+                            />
+                            <img
+                                src="images/our-partners/5 Logo_Bru-1-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="25"
+                            />
+                            <img
+                                src="images/our-partners/6 Logo_Complan-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="30"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/7 Logo_Crompton-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="35"
+                            />
+                            <img
+                                src="images/our-partners/8 Logo_DesiAtta-1-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="40"
+                            />
+                            <img
+                                src="images/our-partners/9 Logo_Everyuth-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="45"
+                            />
+                            <img
+                                src="images/our-partners/10 Logo_Indulekha-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="50"
+                            />
+                            <img
+                                src="images/our-partners/11 Logo_Lakme-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="55"
+                            />
+                            <img
+                                src="images/our-partners/12 Logo_Nescafe-300x169 E.jpg"
+                                alt=""
+                                data-aos="fade"
+                                data-aos-delay="60"
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -413,6 +419,14 @@
                 pagination: {
                     el: ".swiper-pagination",
                     dynamicBullets: true,
+                },
+            });
+
+            var partnerSwiper = new Swiper(".partnerSwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
                 },
             });
 

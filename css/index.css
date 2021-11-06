@@ -30,7 +30,7 @@
 .single-spotlight img {
     width: 100%;
     height: 100%;
-    transform: scale(1.4);
+    transform: scale(1.15);
     transition: transform 400ms ease;
 }
 
@@ -136,11 +136,17 @@
 /* partner */
 
 #all-our-partners {
-    margin: 0 80px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(6, 1fr);
-    grid-row-gap: 24px;
+    margin: 0 120px;
+}
+#all-our-partners .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#all-our-partners img {
+    width: 150px;
+    height: 150px;
 }
 
 /* founder */
