@@ -1,26 +1,26 @@
-<section>
-    <div class="heading" data-aos="slide-up">
-        <h2>Testimonial</h2>
+<div class="container py-5">
+    <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+        <h1>Testimonial</h1>
     </div>
-    <div id="reviews">
-        <div id="review-text" data-aos="fade">
-            <h5>Clients Feedback</h5>
-            <h2>Clients Love</h2>
+    <div id="reviews" class="d-flex align-content-center justify-content-between">
+        <div id="review-text" class="mt-5 w-50" data-aos="fade">
+            <h5 >Clients Feedback</h5>
+            <h2 class="font-b my-4">Clients Love</h2>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eos, vitae esse numquam, mollitia corrupti
                 iure id sint veniam libero deserunt voluptatum recusandae natus fugit debitis earum nobis odit expedita.
             </p>
-            <div class="review-nav">
-                <button id="prevReview" disabled="true">←</button>
-                <button id="nextReview">→</button>
+            <div class="review-nav mt-5">
+                <button id="prevReview" class="px-3 py-2 font-b border-dark rounded-circle bg-dark text-white" disabled="true">←</button>
+                <button id="nextReview" class="px-3 py-2 ml-3 font-b border-dark rounded-circle bg-dark text-white">→</button>
             </div>
         </div>
-        <div id="all-reviews" data-aos="slide-up">
-            <div class="single-review">
+        <div id="all-reviews" class="p-4 w-50" data-aos="slide-up">
+            <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
@@ -28,79 +28,63 @@
             <div class="single-review active">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
             </div>
-            <div class="single-review">
+            <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
             </div>
-            <div class="single-review">
+            <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
             </div>
-            <div class="single-review">
+            <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
             </div>
-            <div class="single-review">
+            <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
             </div>
-            <div class="single-review">
+            <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
-                    <h4>Harshal Singh</h4>
-                    <p>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div class="container py-5 mt-5">
 <style>
-    #reviews {
-        margin: 0 180px 120px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #review-text {
-        width: 480px;
-    }
-
-    #review-text h2 {
-        line-height: 2.5;
-    }
-
     #all-reviews {
-        padding: 20px;
-        height: 440px;
+        height: 460px;
         overflow: hidden;
     }
 
@@ -108,21 +92,7 @@
         width: 0;
     }
 
-    .review-nav button {
-        margin-right: 16px;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 16px 18px;
-        border-radius: 50%;
-        color: #fff;
-        margin-top: 40px;
-        background-color: #5c5c5c;
-    }
-
     .single-review {
-        width: 560px;
-        display: flex;
-        align-items: center;
         padding: 24px;
         border-radius: 10px;
         background-color: #fff;
@@ -138,15 +108,13 @@
 
     .single-review:nth-child(even) {
         margin: 32px 0;
+        display: flex;
+        align-items: center;
     }
 
     .single-review img {
         margin-right: 16px;
         border-radius: 50%;
-    }
-
-    .single-review h4 {
-        margin-bottom: 6px;
     }
 
     .single-review p {

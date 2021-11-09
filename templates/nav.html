@@ -1,73 +1,60 @@
-<nav>
-    <div id="logo">Triangular Dots</div>
-    <div id="nav-links">
-        <a href="/triangular-dots">Home</a>
-        <details>
-            <summary>Services</summary>
-            <div>
-                <a href="single-service.html">Service 1</a><br />
-                <a href="single-service.html">Service 2</a><br />
-                <a href="single-service.html">Service 3</a><br />
-                <a href="single-service.html">Service 4</a><br />
-                <a href="single-service.html">Service 5</a><br />
+<nav class="navbar navbar-expand-lg navbar-light fixed-top w-100">
+    <div class="container-fluid">
+        <div class="container">
+            <a class="navbar-brand font-b" href="#">Triangular Dots</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="justify-content-end collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px">
+                    <li class="nav-item px-1">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item px-1 dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            id="navbarScrollingDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="single-service.html">Services 1</a></li>
+                            <li><a class="dropdown-item" href="single-service.html">Services 2</a></li>
+                            <li><a class="dropdown-item" href="single-service.html">Services 3</a></li>
+                            <li><a class="dropdown-item" href="single-service.html">Services 4</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="single-service.html">Services 5</a></li>
+                            <li><a class="dropdown-item" href="single-service.html">Services 6</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="our-work.html">Our Works</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="case-studies.html">Case Studies</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
             </div>
-        </details>
-        <a href="our-work.html">Our Works</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
+        </div>
     </div>
 </nav>
-
-<style>
-    nav {
-        z-index: 11111;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 40px 80px;
-        background-color: transparent;
-        transition: 500ms ease;
-    }
-
-    nav.sticky {
-        padding: 25px 80px;
-        background-color: #fff;
-        box-shadow: 0px 10px 40px rgb(0 0 0 / 10%);
-    }
-
-    #logo {
-        font-weight: 600;
-    }
-
-    #nav-links a {
-        display: inline-block;
-        font-size: 15px;
-        margin-left: 16px;
-    }
-
-    details {
-        cursor: pointer;
-        margin-left: 16px;
-        display: inline;
-    }
-
-    details div {
-        top: 68px;
-        position: fixed;
-        padding-right: 16px;
-        background-color: #fff;
-        box-shadow: 0 12px 20px rgb(0 0 0 / 10%);
-    }
-
-    details div a {
-        padding: 10px;
-        padding-left: 4px;
-        border-bottom: 1px solid #c5c5c5;
-    }
-</style>
