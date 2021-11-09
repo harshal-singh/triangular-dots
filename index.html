@@ -60,6 +60,12 @@
                 background-repeat: no-repeat;
             }
 
+            #our-partners .swiper-slide {
+                display: grid;
+                place-items: center;
+                width: fit-content !important;
+            }
+
             /* Sub Service */
             #sub-services .swiper-slide {
                 width: fit-content;
@@ -117,7 +123,6 @@
             }
 
             /* spotlight */
-
             #all-spotlight {
                 display: grid;
                 grid-gap: 2px;
@@ -163,6 +168,25 @@
                 font-weight: 500;
                 margin-bottom: 16px;
             }
+
+            @media (max-width: 1200px) {
+                .single-number-counter {
+                    max-width: unset;
+                    width: 90%;
+                }
+
+                #all-our-approachs div:nth-child(odd) {
+                    margin-bottom: 0;
+                }
+
+                #all-spotlight {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                #our-partners img {
+                    width: 100px;
+                }
+            }
         </style>
     </head>
 
@@ -204,7 +228,7 @@
                 </div>
                 <div id="all-our-partners" class="swiper partnerSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide d-flex align-content-center justify-content-between">
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/1 Logo_Aashirvaad-1-300x169 E.jpg"
                                 alt=""
@@ -212,6 +236,8 @@
                                 data-aos="fade"
                                 data-aos-delay="5"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/2 Logo_AmbiPur-1-300x169 E.jpg"
                                 alt=""
@@ -219,6 +245,8 @@
                                 data-aos="fade"
                                 data-aos-delay="10"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/3 Logo_Ariel-1-300x169 E.jpg"
                                 alt=""
@@ -226,6 +254,8 @@
                                 data-aos="fade"
                                 data-aos-delay="15"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/4 Logo_Barista-1-300x169 E.jpg"
                                 alt=""
@@ -233,6 +263,8 @@
                                 data-aos="fade"
                                 data-aos-delay="20"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/5 Logo_Bru-1-300x169 E.jpg"
                                 alt=""
@@ -240,6 +272,8 @@
                                 data-aos="fade"
                                 data-aos-delay="25"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/6 Logo_Complan-300x169 E.jpg"
                                 alt=""
@@ -248,7 +282,7 @@
                                 data-aos-delay="30"
                             />
                         </div>
-                        <div class="swiper-slide d-flex align-content-center justify-content-between">
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/7 Logo_Crompton-300x169 E.jpg"
                                 alt=""
@@ -256,6 +290,8 @@
                                 data-aos="fade"
                                 data-aos-delay="35"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/8 Logo_DesiAtta-1-300x169 E.jpg"
                                 alt=""
@@ -263,6 +299,8 @@
                                 data-aos="fade"
                                 data-aos-delay="40"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/9 Logo_Everyuth-300x169 E.jpg"
                                 alt=""
@@ -270,6 +308,8 @@
                                 data-aos="fade"
                                 data-aos-delay="45"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/10 Logo_Indulekha-300x169 E.jpg"
                                 alt=""
@@ -277,6 +317,8 @@
                                 data-aos="fade"
                                 data-aos-delay="50"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/11 Logo_Lakme-300x169 E.jpg"
                                 alt=""
@@ -284,6 +326,8 @@
                                 data-aos="fade"
                                 data-aos-delay="55"
                             />
+                        </div>
+                        <div class="swiper-slide">
                             <img
                                 src="images/our-partners/12 Logo_Nescafe-300x169 E.jpg"
                                 alt=""
@@ -540,8 +584,413 @@
 
         <!-- mobile view -->
         <div class="d-lg-none position-relative">
-            <!-- Enter Code for Mobile UI here -->
-            <h1>This is mobile view</h1>
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Hero Section -->
+            <section id="hero" class="container-fluid px-0" data-aos="fade">
+                <!-- Swiper -->
+                <div class="swiper heroSwiper">
+                    <div class="swiper-wrapper">
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- Our Partners -->
+            <section id="our-partners" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>our partners</h1>
+                </div>
+                <div id="all-our-partners" class="swiper partnerSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/1 Logo_Aashirvaad-1-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="5"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/2 Logo_AmbiPur-1-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="10"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/3 Logo_Ariel-1-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="15"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/4 Logo_Barista-1-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="20"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/5 Logo_Bru-1-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="25"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/6 Logo_Complan-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="30"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/7 Logo_Crompton-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="35"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/8 Logo_DesiAtta-1-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="40"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/9 Logo_Everyuth-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="45"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/10 Logo_Indulekha-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="50"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/11 Logo_Lakme-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="55"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="images/our-partners/12 Logo_Nescafe-300x169 E.jpg"
+                                alt=""
+                                width="100"
+                                data-aos="fade"
+                                data-aos-delay="60"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section class="services"></section>
+
+            <!-- Sub Services  -->
+            <section id="sub-services" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>sub services</h1>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper subServicesSwiper py-5">
+                    <div class="swiper-wrapper" data-aos="fade" data-aos-offset="200">
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/250x360" />
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+
+            <!-- Number Counter -->
+            <section id="number-counter" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>number counter</h1>
+                </div>
+                <div
+                    class="counter__section d-flex align-content-center justify-content-center flex-column"
+                    id="all-number-counter"
+                >
+                    <div class="single-number-counter mx-auto mb-5 pb-5" data-aos="slide-up" data-aos-offset="200">
+                        <h4 class="d-flex">
+                            <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
+                            <p class="font-m mb-0">Years & Counting</p>
+                        </h4>
+                        <h1 class="my-2 font-xb"><span class="counter" data-count="10">0</span>+</h1>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non neque odit fugiat,
+                            voluptatibus quo eveniet quisquam.
+                        </p>
+                    </div>
+                    <div
+                        class="single-number-counter mx-auto mb-5 pb-5"
+                        data-aos="slide-up"
+                        data-aos-offset="200"
+                        data-aos-delay="100"
+                    >
+                        <h4 class="d-flex">
+                            <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
+                            <p class="font-m mb-0">Projects</p>
+                        </h4>
+                        <h1 class="my-2 font-xb"><span class="counter" data-count="800">0</span>+</h1>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non neque odit fugiat,
+                            voluptatibus quo eveniet quisquam.
+                        </p>
+                    </div>
+                    <div
+                        class="single-number-counter mx-auto pb-5"
+                        data-aos="slide-up"
+                        data-aos-offset="200"
+                        data-aos-delay="200"
+                    >
+                        <h4 class="d-flex">
+                            <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
+                            <p class="font-m mb-0">Audience Reached</p>
+                        </h4>
+                        <h1 class="my-2 font-xb"><span class="counter" data-count="10">0</span>M+</h1>
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non neque odit fugiat,
+                            voluptatibus quo eveniet quisquam.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Approachs -->
+            <section id="our-approachs" class="container py-5 my-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Our Approachs</h1>
+                </div>
+                <div id="all-our-approachs" class="d-flex align-items-center justify-content-between flex-wrap">
+                    <div
+                        class="d-flex align-content-center justify-content-center flex-column w-50 p-5"
+                        data-aos="slide-up"
+                        data-aos-delay="200"
+                    >
+                        <img width="100%" src="images/our-approach/1 Ideation.png" alt="" />
+                        <h5 class="font-b text-center">Ideation</h5>
+                    </div>
+                    <div
+                        class="d-flex align-content-center justify-content-center flex-column w-50"
+                        data-aos="slide-up"
+                    >
+                        <img width="100%" src="images/our-approach/2 Planning _ Research.png" alt="" />
+                        <h5 class="font-b text-center">Planning & Research</h5>
+                    </div>
+                    <div
+                        class="d-flex align-content-center justify-content-center flex-column w-50"
+                        data-aos="slide-up"
+                        data-aos-delay="200"
+                    >
+                        <img width="100%" src="images/our-approach/3 Exectuion.png" alt="" />
+                        <h5 class="font-b text-center">Execution</h5>
+                    </div>
+                    <div
+                        class="d-flex align-content-center justify-content-center flex-column w-50"
+                        data-aos="slide-up"
+                    >
+                        <img width="100%" src="images/our-approach/4 Better ROI.png" alt="" />
+                        <h5 class="font-b text-center">Brand Engagement</h5>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Founder -->
+            <section id="founder" class="container-fluid py-5 bg-light">
+                <div id="text-area" class="d-flex align-items-start justify-content-between w-75">
+                    <img
+                        class="mr-5"
+                        width="80"
+                        height="80"
+                        src="https://via.placeholder.com/80"
+                        alt=""
+                        data-aos="fade-up"
+                        data-aos-delay="25"
+                    />
+                    <div data-aos="fade-up" data-aos-delay="100" class="pl-5">
+                        <p>
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt suscipit doloremque fugiat
+                            animi dicta ut est aperiam numquam vel."
+                        </p>
+                        <h6 class="font-b mt-4 mb-0">Lorem ipsum</h6>
+                        <small>Founder, Company</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Case Studies -->
+            <section id="spotlight" class="container-fluid py-5 mt-4 px-0">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Case studies</h1>
+                </div>
+                <div id="all-spotlight">
+                    <a href="single-case-studies.html" class="single-spotlight" data-aos="slide-up">
+                        <img src="images/casestudies/Castrol wo elements.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="single-case-studies.html"
+                        class="single-spotlight"
+                        data-aos="slide-up"
+                        data-aos-delay="100"
+                    >
+                        <img src="images/casestudies/Sugarlite wo elements.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="single-case-studies.html"
+                        class="single-spotlight"
+                        data-aos="slide-up"
+                        data-aos-delay="200"
+                    >
+                        <img src="images/casestudies/Nescafe wo elements.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="single-case-studies.html" class="single-spotlight" data-aos="slide-up">
+                        <img src="images/casestudies/Castrol.png" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="single-case-studies.html"
+                        class="single-spotlight"
+                        data-aos="slide-up"
+                        data-aos-delay="100"
+                    >
+                        <img src="images/casestudies/Nescafe.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="single-case-studies.html"
+                        class="single-spotlight"
+                        data-aos="slide-up"
+                        data-aos-delay="200"
+                    >
+                        <img src="images/casestudies/Sugarlite.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Reviews -->
+            <section class="reviews"></section>
+
+            <!-- Our Blogs -->
+            <section class="blogs"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
         </div>
 
         <!-- Optional JavaScript -->
@@ -555,14 +1004,14 @@
 
         <script>
             // Add custom javascript and jquery here
-            $(".nav").load("templates/nav.html");
-            $(".services").load("templates/services.html");
-            $(".reviews").load("templates/reviews.html");
-            $(".blogs").load("templates/blogs.html");
-            $(".footer").load("templates/footer.html");
+            $(".nav").load("template/nav.html");
+            $(".services").load("template/services.html");
+            $(".reviews").load("template/reviews.html");
+            $(".blogs").load("template/blogs.html");
+            $(".footer").load("template/footer.html");
 
             var heroSwiper = new Swiper(".heroSwiper", {
-                // loop: true,
+                loop: true,
                 autoplay: {
                     delay: 4000,
                     disableOnInteraction: false,
@@ -575,9 +1024,26 @@
 
             var partnerSwiper = new Swiper(".partnerSwiper", {
                 loop: true,
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
                 autoplay: {
                     delay: 4000,
                     disableOnInteraction: false,
+                },
+                breakpoints: {
+                    411: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 40,
+                    },
                 },
             });
 

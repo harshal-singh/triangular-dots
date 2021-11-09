@@ -3,7 +3,7 @@
         <h1>Testimonial</h1>
     </div>
     <div id="reviews" class="d-flex align-content-center justify-content-between">
-        <div id="review-text" class="mt-5 w-50" data-aos="fade">
+        <div id="review-text" class="mt-5 w-50 px-md-5" data-aos="fade">
             <h5 >Clients Feedback</h5>
             <h2 class="font-b my-4">Clients Love</h2>
             <p>
@@ -15,7 +15,7 @@
                 <button id="nextReview" class="px-3 py-2 ml-3 font-b border-dark rounded-circle bg-dark text-white">→</button>
             </div>
         </div>
-        <div id="all-reviews" class="p-4 w-50" data-aos="slide-up">
+        <div id="all-reviews" class="p-4 w-50 mt-md-5" data-aos="slide-up">
             <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
@@ -124,6 +124,21 @@
     @media (max-width: 1200px) {
         #all-reviews {
             height: 520px;
+            width: 100%!important;
+        }
+
+        #review-text{
+            width: 100%!important;
+        }
+
+        #reviews{
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 992px) {
+        #all-reviews {
+            height: 470px;
         }
     }
 </style>
