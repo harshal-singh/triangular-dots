@@ -1,111 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Enter a proper page title here -->
         <title>Triangular Dots</title>
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="css/aos.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/index.css" />
-    </head>
-    <body>
-        <main>
-            <div class="navigation"></div>
 
-            <section id="hero" data-aos="zoom-in">
+        <!-- CSS to include bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/aos.css" />
+        <!-- css to include style.css -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- required meta tags essential for seo and link sharing -->
+
+        <!-- Enter a proper description for the page in the meta description tag -->
+        <meta name="description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter a keywords for the page in tag -->
+        <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+        <!-- Enter Page title -->
+        <meta property="og:title" content="ENTER_PAGE_TITLE" />
+
+        <!-- Enter Page URL -->
+        <meta property="og:url" content="ENTER_PAGE_URL" />
+
+        <!-- Enter page description -->
+        <meta property="og:description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter Logo image URL for example : http://ww.example.com/images/logo.png -->
+        <meta property="og:image" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:secure_url" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+        <link rel="icon" href="ENTER_FAVICON_LOCATION" />
+
+        <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
+        <style>
+            /* Hero */
+            #hero {
+                width: 100%;
+                height: 100vh;
+            }
+
+            #hero > .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            #hero .swiper-slide {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            /* Sub Service */
+            #sub-services .swiper-slide {
+                width: fit-content;
+            }
+
+            #sub-services .swiper-pagination {
+                bottom: 0;
+            }
+
+            /* Number Counter */
+            .single-number-counter {
+                cursor: default;
+                position: relative;
+                top: 24px;
+                max-width: 31%;
+                padding: 28px;
+                background-color: #fff;
+                border-bottom-right-radius: 60px;
+                box-shadow: 0px 12px 48px rgb(0 0 0 / 10%);
+                border: 1px solid #eee;
+            }
+
+            .single-number-counter:hover {
+                transform: translateY(-24px) !important;
+                transition: transform 400ms ease !important;
+            }
+
+            .single-number-counter h4 {
+                height: 60px;
+                font-size: 20px;
+            }
+
+            /* Our Approchs */
+            #all-our-approachs div:nth-child(odd) {
+                margin-bottom: 140px;
+            }
+
+            #all-our-approachs img:first-child {
+                padding: 28px;
+            }
+
+            /* Founder */
+            #founder {
+                position: relative;
+                height: 480px;
+                background: #efefef;
+            }
+
+            #text-area {
+                width: 60%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            /* spotlight */
+
+            #all-spotlight {
+                display: grid;
+                grid-gap: 2px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .single-spotlight {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .single-spotlight img {
+                width: 100%;
+                height: 100%;
+                transform: scale(1.15);
+                transition: transform 400ms ease;
+            }
+
+            .single-spotlight:hover img {
+                transform: scale(1);
+            }
+
+            .single-spotlight:hover .spotlight-text {
+                opacity: 1;
+            }
+
+            .spotlight-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0 0 0 / 60%);
+                display: grid;
+                place-items: center;
+                opacity: 0;
+                transition: opacity 400ms ease;
+            }
+
+            .spotlight-text h5 {
+                color: orange;
+                font-weight: 500;
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="d-none d-lg-block">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Hero Section -->
+            <section id="hero" class="container-fluid px-0" data-aos="fade">
                 <!-- Swiper -->
                 <div class="swiper heroSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="https://via.placeholder.com/1440x720" alt="" /></div>
-                        <div class="swiper-slide"><img src="https://via.placeholder.com/1440x720" alt="" /></div>
-                        <div class="swiper-slide"><img src="https://via.placeholder.com/1440x720" alt="" /></div>
-                        <div class="swiper-slide"><img src="https://via.placeholder.com/1440x720" alt="" /></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
+                        <div
+                            class="swiper-slide"
+                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                        ></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
 
-            <section id="our-partners">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Our Partners</h2>
+            <!-- Our Partners -->
+            <section id="our-partners" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>our partners</h1>
                 </div>
                 <div id="all-our-partners" class="swiper partnerSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide d-flex align-content-center justify-content-between">
                             <img
                                 src="images/our-partners/1 Logo_Aashirvaad-1-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="5"
                             />
                             <img
                                 src="images/our-partners/2 Logo_AmbiPur-1-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="10"
                             />
                             <img
                                 src="images/our-partners/3 Logo_Ariel-1-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="15"
                             />
                             <img
                                 src="images/our-partners/4 Logo_Barista-1-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="20"
                             />
                             <img
                                 src="images/our-partners/5 Logo_Bru-1-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="25"
                             />
                             <img
                                 src="images/our-partners/6 Logo_Complan-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="30"
                             />
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide d-flex align-content-center justify-content-between">
                             <img
                                 src="images/our-partners/7 Logo_Crompton-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="35"
                             />
                             <img
                                 src="images/our-partners/8 Logo_DesiAtta-1-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="40"
                             />
                             <img
                                 src="images/our-partners/9 Logo_Everyuth-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="45"
                             />
                             <img
                                 src="images/our-partners/10 Logo_Indulekha-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="50"
                             />
                             <img
                                 src="images/our-partners/11 Logo_Lakme-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="55"
                             />
                             <img
                                 src="images/our-partners/12 Logo_Nescafe-300x169 E.jpg"
                                 alt=""
+                                width="150"
                                 data-aos="fade"
                                 data-aos-delay="60"
                             />
@@ -114,41 +296,43 @@
                 </div>
             </section>
 
-            <div class="services" data-aos="fade-up" data-aos-offset="200"></div>
+            <!-- Services -->
+            <section class="services"></section>
 
-            <section id="sub-services">
-                <div class="heading" data-aos="slide-up">
-                    <h2>sub services</h2>
+            <!-- Sub Services  -->
+            <section id="sub-services" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>sub services</h1>
                 </div>
                 <!-- Swiper -->
-                <div class="swiper subServicesSwiper">
-                    <div class="swiper-wrapper" data-aos="fade-in" data-aos-offset="200">
+                <div class="swiper subServicesSwiper py-5">
+                    <div class="swiper-wrapper" data-aos="fade" data-aos-offset="200">
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/264x360" />
+                            <img src="https://via.placeholder.com/250x360" />
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -157,88 +341,126 @@
                 </div>
             </section>
 
-            <section id="number-counter">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Number Counter</h2>
+            <!-- Number Counter -->
+            <section id="number-counter" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>number counter</h1>
                 </div>
-                <div class="counter__section" id="all-number-counter">
+                <div
+                    class="counter__section d-flex align-content-center justify-content-between"
+                    id="all-number-counter"
+                >
                     <div class="single-number-counter" data-aos="slide-up" data-aos-offset="200">
-                        <h4><img src="https://via.placeholder.com/48" alt="" />Years & Counting</h4>
-                        <h1><span class="counter" data-count="10">0</span>+</h1>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus ad debitis
-                            ratione quaerat
-                        </p>
+                        <h4 class="d-flex">
+                            <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
+                            <p class="font-m mb-0">Years & Counting</p>
+                        </h4>
+                        <h1 class="my-4 font-xb"><span class="counter" data-count="10">0</span>+</h1>
+                        <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="single-number-counter" data-aos="slide-up" data-aos-offset="200" data-aos-delay="100">
-                        <h4><img src="https://via.placeholder.com/48" alt="" />Projects</h4>
-                        <h1><span class="counter" data-count="800">0</span>+</h1>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus ad debitis
-                            ratione quaerat
-                        </p>
+                        <h4 class="d-flex">
+                            <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
+                            <p class="font-m mb-0">Projects</p>
+                        </h4>
+                        <h1 class="my-4 font-xb"><span class="counter" data-count="800">0</span>+</h1>
+                        <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div class="single-number-counter" data-aos="slide-up" data-aos-offset="200" data-aos-delay="200">
-                        <h4><img src="https://via.placeholder.com/48" alt="" />Audience Reached</h4>
-                        <h1><span class="counter" data-count="10">0</span>M+</h1>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus ad debitis
-                            ratione quaerat
-                        </p>
+                        <h4 class="d-flex">
+                            <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
+                            <p class="font-m mb-0">Audience Reached</p>
+                        </h4>
+                        <h1 class="my-4 font-xb"><span class="counter" data-count="10">0</span>M+</h1>
+                        <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="our-approachs">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Our Approachs</h2>
+            <!-- Our Approachs -->
+            <section id="our-approachs" class="container py-5 mt-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Our Approachs</h1>
                 </div>
-                <div id="all-our-approachs">
-                    <div data-aos="slide-up" data-aos-delay="200">
-                        <img src="images/our-approach/1 Ideation.png" alt="" />
-                        <h4>Ideation</h4>
+                <div id="all-our-approachs" class="d-flex align-items-center justify-content-between">
+                    <div
+                        class="d-flex align-content-center justify-content-center flex-column"
+                        data-aos="slide-up"
+                        data-aos-delay="200"
+                    >
+                        <img width="240" src="images/our-approach/1 Ideation.png" alt="" />
+                        <h5 class="font-b text-center">Ideation</h5>
                     </div>
-                    <div data-aos="slide-up">
-                        <img src="images/our-approach/2 Planning _ Research.png" alt="" />
-                        <h4>Planning & Research</h4>
+                    <div class="d-flex align-content-center justify-content-center flex-column" data-aos="slide-up">
+                        <img width="240" src="images/our-approach/2 Planning _ Research.png" alt="" />
+                        <h5 class="font-b text-center">Planning & Research</h5>
                     </div>
-                    <div data-aos="slide-up" data-aos-delay="200">
-                        <img src="images/our-approach/3 Exectuion.png" alt="" />
-                        <h4>Execution</h4>
+                    <div
+                        class="d-flex align-content-center justify-content-center flex-column"
+                        data-aos="slide-up"
+                        data-aos-delay="200"
+                    >
+                        <img width="240" src="images/our-approach/3 Exectuion.png" alt="" />
+                        <h5 class="font-b text-center">Execution</h5>
                     </div>
-                    <div data-aos="slide-up">
-                        <img src="images/our-approach/4 Better ROI.png" alt="" />
-                        <h4>Brand Engagement</h4>
+                    <div class="d-flex align-content-center justify-content-center flex-column" data-aos="slide-up">
+                        <img width="240" src="images/our-approach/4 Better ROI.png" alt="" />
+                        <h5 class="font-b text-center">Brand Engagement</h5>
                     </div>
                 </div>
             </section>
 
-            <section id="founder">
-                <div id="text-area">
-                    <img src="https://via.placeholder.com/80" alt="" data-aos="fade-up" data-aos-delay="25" />
-                    <div data-aos="fade-up" data-aos-delay="100">
+            <!-- Founder -->
+            <section id="founder" class="container-fluid py-5 bg-light">
+                <div id="text-area" class="d-flex align-items-start justify-content-between">
+                    <img
+                        class="mr-5"
+                        width="80"
+                        height="80"
+                        src="https://via.placeholder.com/80"
+                        alt=""
+                        data-aos="fade-up"
+                        data-aos-delay="25"
+                    />
+                    <div data-aos="fade-up" data-aos-delay="100" class="pl-5">
                         <p>
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt suscipit doloremque fugiat
                             animi dicta ut est aperiam numquam vel."
                         </p>
-                        <h5>Lorem ipsum</h5>
-                        <h6>Founder, Company</h6>
+                        <h6 class="font-b mt-4 mb-0">Lorem ipsum</h6>
+                        <small>Founder, Company</small>
                     </div>
                 </div>
             </section>
 
-            <section id="spotlight">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Case Study</h2>
+            <!-- Case Studies -->
+            <section id="spotlight" class="container-fluid py-5 mt-4 px-0">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Case studies</h1>
                 </div>
                 <div id="all-spotlight">
                     <a href="single-case-studies.html" class="single-spotlight" data-aos="slide-up">
                         <img src="images/casestudies/Castrol wo elements.jpg" alt="" />
                         <div class="spotlight-text">
-                            <div>
-                                <h5>Design <span>/</span> Illustration</h5>
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <h6>→</h6>
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="single-case-studies.html"
+                        class="single-spotlight"
+                        data-aos="slide-up"
+                        data-aos-delay="100"
+                    >
+                        <img src="images/casestudies/Sugarlite wo elements.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
                             </div>
                         </div>
                     </a>
@@ -248,37 +470,37 @@
                         data-aos="slide-up"
                         data-aos-delay="200"
                     >
-                        <img src="images/casestudies/Sugarlite wo elements.jpg" alt="" />
-                        <div class="spotlight-text">
-                            <div>
-                                <h5>Design <span>/</span> Illustration</h5>
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <h6>→</h6>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-spotlight"
-                        data-aos="slide-up"
-                        data-aos-delay="400"
-                    >
                         <img src="images/casestudies/Nescafe wo elements.jpg" alt="" />
                         <div class="spotlight-text">
-                            <div>
-                                <h5>Design <span>/</span> Illustration</h5>
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <h6>→</h6>
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
                             </div>
                         </div>
                     </a>
                     <a href="single-case-studies.html" class="single-spotlight" data-aos="slide-up">
                         <img src="images/casestudies/Castrol.png" alt="" />
                         <div class="spotlight-text">
-                            <div>
-                                <h5>Design <span>/</span> Illustration</h5>
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <h6>→</h6>
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="single-case-studies.html"
+                        class="single-spotlight"
+                        data-aos="slide-up"
+                        data-aos-delay="100"
+                    >
+                        <img src="images/casestudies/Nescafe.jpg" alt="" />
+                        <div class="spotlight-text">
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
                             </div>
                         </div>
                     </a>
@@ -288,125 +510,53 @@
                         data-aos="slide-up"
                         data-aos-delay="200"
                     >
-                        <img src="images/casestudies/Nescafe.jpg" alt="" />
-                        <div class="spotlight-text">
-                            <div>
-                                <h5>Design <span>/</span> Illustration</h5>
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <h6>→</h6>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-spotlight"
-                        data-aos="slide-up"
-                        data-aos-delay="400"
-                    >
                         <img src="images/casestudies/Sugarlite.jpg" alt="" />
                         <div class="spotlight-text">
-                            <div>
-                                <h5>Design <span>/</span> Illustration</h5>
-                                <h3>Lorem ipsum dolor sit amet.</h3>
-                                <h6>→</h6>
+                            <div class="font-b text-warning text-center">
+                                <h6>Design <span class="text-white">/</span> Illustration</h6>
+                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
+                                <h2 class="mt-4">→</h2>
                             </div>
                         </div>
                     </a>
                 </div>
             </section>
 
-            <div class="reviews"></div>
+            <!-- Reviews -->
+            <section class="reviews"></section>
 
-            <!-- <section id="case-study">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Case Study</h2>
-                </div>
-                <div id="all-case-study">
-                    <a
-                        href="single-case-studies.html"
-                        class="single-case-study"
-                        data-aos="slide-up"
-                        data-aos-offset="200"
-                    >
-                        <img src="https://via.placeholder.com/325x264" alt="" />
-                        <h4>Lorem ipsum dolor.</h4>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
-                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
-                            cumque vel blanditiis illo earum at tempora nihil.
-                        </p>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-case-study"
-                        data-aos="slide-up"
-                        data-aos-offset="200"
-                        data-aos-delay="100"
-                    >
-                        <img src="https://via.placeholder.com/325x264" alt="" />
-                        <h4>Lorem ipsum dolor.</h4>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
-                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
-                            cumque vel blanditiis illo earum at tempora nihil.
-                        </p>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-case-study"
-                        data-aos="slide-up"
-                        data-aos-offset="200"
-                        data-aos-delay="200"
-                    >
-                        <img src="https://via.placeholder.com/325x264" alt="" />
-                        <h4>Lorem ipsum dolor.</h4>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
-                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
-                            cumque vel blanditiis illo earum at tempora nihil.
-                        </p>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-case-study"
-                        data-aos="slide-up"
-                        data-aos-offset="200"
-                        data-aos-delay="300"
-                    >
-                        <img src="https://via.placeholder.com/325x264" alt="" />
-                        <h4>Lorem ipsum dolor.</h4>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem praesentium voluptatum
-                            quibusdam et rerum suscipit magni impedit officia repudiandae! Harum explicabo doloremque
-                            cumque vel blanditiis illo earum at tempora nihil.
-                        </p>
-                    </a>
-                </div>
-                <button id="view-more">View More &nbsp; →</button>
-            </section> -->
+            <!-- Our Blogs -->
+            <section class="blogs"></section>
 
-            <div class="blogs"></div>
-
+            <!-- Footer -->
             <div class="footer"></div>
-        </main>
+        </div>
 
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- mobile view -->
+        <div class="d-lg-none position-relative">
+            <!-- Enter Code for Mobile UI here -->
+            <h1>This is mobile view</h1>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Initialize Swiper -->
         <script>
-            $(".navigation").load("templates/nav.html");
-            $(".services").load("templates/services.html");
-            $(".blogs").load("templates/blogs.html");
-            $(".reviews").load("templates/reviews.html");
-            $(".footer").load("templates/footer.html");
+            // Add custom javascript and jquery here
+            $(".nav").load("template/nav.html");
+            $(".services").load("template/services.html");
+            $(".reviews").load("template/reviews.html");
+            $(".blogs").load("template/blogs.html");
+            $(".footer").load("template/footer.html");
 
             var heroSwiper = new Swiper(".heroSwiper", {
-                loop: true,
+                // loop: true,
                 autoplay: {
                     delay: 4000,
                     disableOnInteraction: false,
@@ -432,7 +582,7 @@
                 centeredSlides: true,
                 slidesPerView: "auto",
                 coverflowEffect: {
-                    rotate: 40,
+                    rotate: 25,
                     stretch: 0,
                     depth: 0,
                     modifier: 1,

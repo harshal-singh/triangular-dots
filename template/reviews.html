@@ -1,0 +1,178 @@
+<div class="container py-5">
+    <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+        <h1>Testimonial</h1>
+    </div>
+    <div id="reviews" class="d-flex align-content-center justify-content-between">
+        <div id="review-text" class="mt-5 w-50" data-aos="fade">
+            <h5 >Clients Feedback</h5>
+            <h2 class="font-b my-4">Clients Love</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eos, vitae esse numquam, mollitia corrupti
+                iure id sint veniam libero deserunt voluptatum recusandae natus fugit debitis earum nobis odit expedita.
+            </p>
+            <div class="review-nav mt-5">
+                <button id="prevReview" class="px-3 py-2 font-b border-dark rounded-circle bg-dark text-white" disabled="true">←</button>
+                <button id="nextReview" class="px-3 py-2 ml-3 font-b border-dark rounded-circle bg-dark text-white">→</button>
+            </div>
+        </div>
+        <div id="all-reviews" class="p-4 w-50" data-aos="slide-up">
+            <div class="single-review d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review active">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div class="container py-5 mt-5">
+<style>
+    #all-reviews {
+        height: 460px;
+        overflow: hidden;
+    }
+
+    #all-reviews::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .single-review {
+        padding: 24px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid #efefef;
+        box-shadow: 0px 6px 12px rgb(0 0 0 / 10%);
+        transition: background-color 200ms ease;
+    }
+
+    .single-review.active {
+        color: #fff;
+        background-color: #5c5c5c;
+    }
+
+    .single-review:nth-child(even) {
+        margin: 32px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .single-review img {
+        margin-right: 16px;
+        border-radius: 50%;
+    }
+
+    .single-review p {
+        font-size: 14px;
+    }
+</style>
+<script>
+    // 120px
+    const reviewBox = document.getElementById("all-reviews");
+    const allReviews = document.querySelectorAll(".single-review");
+    const nextReview = document.getElementById("nextReview");
+    const prevReview = document.getElementById("prevReview");
+
+    const reviewsCount = allReviews.length;
+    const reviewHeight = Math.floor(reviewBox.scrollHeight / reviewsCount) + 4;
+
+    let count = 0;
+    let scrollReviewTo = 0;
+
+    nextReview.onclick = () => {
+        if (count <= reviewsCount - 3) {
+            scrollReviewTo = reviewHeight * (count + 1);
+            const options = {
+                top: scrollReviewTo,
+                behavior: "smooth",
+            };
+            reviewBox.scrollTo(options);
+            allReviews[count + 1].classList.remove("active");
+            allReviews[count + 2].classList.add("active");
+            count++;
+
+            if (reviewsCount - 3 == count) {
+                nextReview.setAttribute("disabled", true);
+                if (prevReview.getAttribute("disabled")) {
+                    prevReview.removeAttribute("disabled");
+                }
+            }
+        }
+    };
+
+    prevReview.onclick = () => {
+        if (count <= reviewsCount - 3 && count > 0) {
+            scrollReviewTo = scrollReviewTo - reviewHeight;
+            const options = {
+                top: scrollReviewTo,
+                behavior: "smooth",
+            };
+            reviewBox.scrollTo(options);
+            allReviews[count + 1].classList.remove("active");
+            allReviews[count].classList.add("active");
+            count--;
+
+            if (count == 0) {
+                prevReview.setAttribute("disabled", true);
+                if (nextReview.getAttribute("disabled")) {
+                    nextReview.removeAttribute("disabled");
+                }
+            }
+        }
+    };
+</script>

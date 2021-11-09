@@ -2,13 +2,16 @@
 
 AOS.init({
     once: false,
-    duration: 1000,
+    duration: 1500,
 });
 
 $(window).scroll(function () {
     var sticky = $("nav"),
         scroll = $(window).scrollTop();
 
-    if (scroll >= 100) sticky.addClass("sticky");
-    else sticky.removeClass("sticky");
+    if (scroll >= 25) {
+        sticky.addClass("shadow nav-fixed");
+    } else {
+        sticky.removeClass("shadow nav-fixed");
+    }
 });
