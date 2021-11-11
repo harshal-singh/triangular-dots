@@ -96,3 +96,31 @@ nav.nav-fixed {
     padding-bottom: 24px !important;
     background-color: #fff;
 }
+
+/* ------------------------ media 1440 ------------------------ */
+
+@media (max-width: 1440px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ------------------------ media 768 ------------------------ */
+
+@media (max-width: 768px) {
+    nav {
+        background-color: #fff;
+    }
+}
+
+/* ------------------------ media 425 ------------------------ */
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+}

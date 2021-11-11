@@ -1,9 +1,9 @@
 <div class="container py-5">
-    <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+    <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
         <h1>Testimonial</h1>
     </div>
-    <div id="reviews" class="d-flex align-content-center justify-content-between">
-        <div id="review-text" class="mt-5 w-50 px-md-5" data-aos="fade">
+    <div id="reviews" class="reviews-box d-flex align-content-center justify-content-between">
+        <div id="review-text" class="review-text mt-lg-5 mt-0 w-50 p-4 pl-lg-2 pr-lg-5" data-aos="fade">
             <h5 >Clients Feedback</h5>
             <h2 class="font-b my-4">Clients Love</h2>
             <p>
@@ -15,7 +15,7 @@
                 <button id="nextReview" class="px-3 py-2 ml-3 font-b border-dark rounded-circle bg-dark text-white">→</button>
             </div>
         </div>
-        <div id="all-reviews" class="p-4 w-50 mt-md-5" data-aos="slide-up">
+        <div id="all-reviews" class="all-reviews p-2 py-lg-4 pl-lg-4 pr-lg-2 w-50" data-aos="slide-up">
             <div class="single-review d-flex align-items-center">
                 <img src="https://via.placeholder.com/64" alt="" />
                 <div>
@@ -120,27 +120,6 @@
     .single-review p {
         font-size: 14px;
     }
-
-    @media (max-width: 1200px) {
-        #all-reviews {
-            height: 520px;
-            width: 100%!important;
-        }
-
-        #review-text{
-            width: 100%!important;
-        }
-
-        #reviews{
-            flex-direction: column;
-        }
-    }
-
-    @media (max-width: 992px) {
-        #all-reviews {
-            height: 470px;
-        }
-    }
 </style>
 <script>
     // 120px
@@ -149,15 +128,30 @@
     const nextReview = document.getElementById("nextReview");
     const prevReview = document.getElementById("prevReview");
 
-    const reviewsCount = allReviews.length;
-    const reviewHeight = Math.floor(reviewBox.scrollHeight / reviewsCount) + 4;
+    const reviewsCount = allReviews.length / 2;
+    let reviewHeight = Math.floor(reviewBox.scrollHeight / reviewsCount) + 4;
+
+    if(window.innerWidth == 1024){
+        reviewBoxHeight = "522px";
+        reviewHeight = Math.floor(reviewBox.scrollHeight / reviewsCount) + 24;
+    }else{
+        reviewBoxHeight = (allReviews[0].clientHeight*3) + 105 + "px";
+    }
+
+    reviewBox.style.height = reviewBoxHeight;
+
+    if(window.innerWidth <= 768){
+        document.querySelectorAll(".reviews-box")[1].classList.add("flex-column");
+        document.querySelectorAll(".review-text")[1].classList.remove("w-50");
+        document.querySelectorAll(".all-reviews")[1].classList.remove("w-50");
+    }
 
     let count = 0;
     let scrollReviewTo = 0;
 
     nextReview.onclick = () => {
         if (count <= reviewsCount - 3) {
-            scrollReviewTo = reviewHeight * (count + 1);
+            scrollReviewTo = (reviewHeight) * (count + 1);
             const options = {
                 top: scrollReviewTo,
                 behavior: "smooth",
@@ -167,7 +161,7 @@
             allReviews[count + 2].classList.add("active");
             count++;
 
-            if (reviewsCount - 3 == count) {
+            if ((reviewsCount - 3) == count) {
                 nextReview.setAttribute("disabled", true);
                 if (prevReview.getAttribute("disabled")) {
                     prevReview.removeAttribute("disabled");

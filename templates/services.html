@@ -1,5 +1,5 @@
 <div class="container py-5">
-    <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+    <div class="text-uppercase text-center mt-0 mb-5 my-md-5 pb-3 font-xb" data-aos="slide-up">
         <h1>services</h1>
     </div>
     <div id="services">
@@ -82,12 +82,11 @@
         position: relative;
         width: 100%;
         padding: 16px 44px;
-        /* border-radius: 10px; */
+        border-radius: 10px;
         display: flex;
         align-items: center;
         border: 1px solid #c5c5c5;
         background-color: white;
-        transition: background-color 200ms ease !important;
     }
 
     .single-service:hover {
@@ -145,8 +144,13 @@
 
     @media (max-width: 1200px) {
         #services {
-            grid-gap: 44px 56px;
             grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 425px) {
+        #services {
+            grid-gap: 28px 0;
         }
     }
 </style>
@@ -161,6 +165,12 @@
             image.src = src.replace("Normal.png", "Hover.png");
         });
         singleService.addEventListener("mouseleave", () => {
+            image.src = src;
+        });
+        singleService.addEventListener("touchstart", () => {
+            image.src = src.replace("Normal.png", "Hover.png");
+        });
+        singleService.addEventListener("touchend", () => {
             image.src = src;
         });
     });

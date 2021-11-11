@@ -60,10 +60,10 @@
                 background-repeat: no-repeat;
             }
 
+            /* Our Partner */
             #our-partners .swiper-slide {
                 display: grid;
                 place-items: center;
-                width: fit-content !important;
             }
 
             /* Sub Service */
@@ -100,11 +100,7 @@
 
             /* Our Approchs */
             #all-our-approachs div:nth-child(odd) {
-                margin-bottom: 140px;
-            }
-
-            #all-our-approachs img:first-child {
-                padding: 28px;
+                margin-bottom: 180px;
             }
 
             /* Founder */
@@ -169,28 +165,75 @@
                 margin-bottom: 16px;
             }
 
+            @media (max-width: 1440px) {
+                #our-partners img {
+                    width: 120px;
+                }
+            }
+
             @media (max-width: 1200px) {
-                .single-number-counter {
-                    max-width: unset;
-                    width: 90%;
+                #our-approachs img {
+                    width: 160px;
                 }
 
-                #all-our-approachs div:nth-child(odd) {
-                    margin-bottom: 0;
+                #our-approachs div:nth-child(3) img {
+                    width: 180px;
+                }
+
+                #text-area {
+                    width: 75%;
                 }
 
                 #all-spotlight {
                     grid-template-columns: repeat(2, 1fr);
                 }
+            }
 
+            @media (max-width: 768px) {
+                .single-number-counter {
+                    max-width: 75%;
+                }
+
+                #all-our-approachs div:nth-child(odd) {
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (max-width: 425px) {
                 #our-partners img {
+                    width: 90px;
+                }
+
+                #our-approachs img {
                     width: 100px;
+                }
+
+                #our-approachs div:nth-child(3) img {
+                    width: 110px;
+                }
+
+                #our-approachs h5 {
+                    width: 110px;
+                    margin: 0 auto;
+                }
+
+                .single-number-counter {
+                    max-width: 95%;
+                }
+
+                #text-area {
+                    width: 90%;
+                }
+
+                #all-spotlight {
+                    grid-template-columns: 1fr;
                 }
             }
         </style>
     </head>
 
     <body>
+        <!-- desktop view -->
         <div class="d-none d-lg-block">
             <!-- Navbar -->
             <div class="nav"></div>
@@ -394,7 +437,7 @@
                     class="counter__section d-flex align-content-center justify-content-between"
                     id="all-number-counter"
                 >
-                    <div class="single-number-counter" data-aos="slide-up" data-aos-offset="200">
+                    <div class="single-number-counter shadow-lg" data-aos="slide-up" data-aos-offset="100">
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Years & Counting</p>
@@ -402,7 +445,12 @@
                         <h1 class="my-2 font-xb"><span class="counter" data-count="10">0</span>+</h1>
                         <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <div class="single-number-counter" data-aos="slide-up" data-aos-offset="200" data-aos-delay="100">
+                    <div
+                        class="single-number-counter shadow-lg"
+                        data-aos="slide-up"
+                        data-aos-offset="100"
+                        data-aos-delay="100"
+                    >
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Projects</p>
@@ -410,7 +458,12 @@
                         <h1 class="my-2 font-xb"><span class="counter" data-count="800">0</span>+</h1>
                         <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <div class="single-number-counter" data-aos="slide-up" data-aos-offset="200" data-aos-delay="200">
+                    <div
+                        class="single-number-counter shadow-lg"
+                        data-aos="slide-up"
+                        data-aos-offset="100"
+                        data-aos-delay="200"
+                    >
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Audience Reached</p>
@@ -430,32 +483,36 @@
                     <div
                         class="d-flex align-content-center justify-content-center flex-column w-25"
                         data-aos="slide-up"
-                        data-aos-delay="200"
+                        data-aos-delay="100"
+                        data-aos-offset="200"
                     >
-                        <img width="100%" src="images/our-approach/1 Ideation.png" alt="" />
-                        <h5 class="font-b text-center">Ideation</h5>
+                        <img width="180" class="mx-auto" src="images/our-approach/1 Ideation.png" alt="" />
+                        <h5 class="font-b text-center mt-4">Ideation</h5>
                     </div>
                     <div
                         class="d-flex align-content-center justify-content-center flex-column w-25"
                         data-aos="slide-up"
+                        data-aos-offset="200"
                     >
-                        <img width="100%" src="images/our-approach/2 Planning _ Research.png" alt="" />
-                        <h5 class="font-b text-center">Planning & Research</h5>
+                        <img width="180" class="mx-auto" src="images/our-approach/2 Planning _ Research.png" alt="" />
+                        <h5 class="font-b text-center mt-2">Planning & Research</h5>
                     </div>
                     <div
                         class="d-flex align-content-center justify-content-center flex-column w-25"
                         data-aos="slide-up"
-                        data-aos-delay="200"
+                        data-aos-delay="100"
+                        data-aos-offset="200"
                     >
-                        <img width="100%" src="images/our-approach/3 Exectuion.png" alt="" />
+                        <img width="200" class="mx-auto" src="images/our-approach/3 Exectuion.png" alt="" />
                         <h5 class="font-b text-center">Execution</h5>
                     </div>
                     <div
                         class="d-flex align-content-center justify-content-center flex-column w-25"
                         data-aos="slide-up"
+                        data-aos-offset="200"
                     >
-                        <img width="100%" src="images/our-approach/4 Better ROI.png" alt="" />
-                        <h5 class="font-b text-center">Brand Engagement</h5>
+                        <img width="180" class="mx-auto" src="images/our-approach/4 Better ROI.png" alt="" />
+                        <h5 class="font-b text-center mt-1">Brand Engagement</h5>
                     </div>
                 </div>
             </section>
@@ -615,7 +672,7 @@
 
             <!-- Our Partners -->
             <section id="our-partners" class="container py-5">
-                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center mt-5 mb-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>our partners</h1>
                 </div>
                 <div id="all-our-partners" class="swiper partnerSwiper">
@@ -737,7 +794,7 @@
 
             <!-- Sub Services  -->
             <section id="sub-services" class="container py-5">
-                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>sub services</h1>
                 </div>
                 <!-- Swiper -->
@@ -779,14 +836,14 @@
 
             <!-- Number Counter -->
             <section id="number-counter" class="container py-5">
-                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>number counter</h1>
                 </div>
                 <div
                     class="counter__section d-flex align-content-center justify-content-center flex-column"
                     id="all-number-counter"
                 >
-                    <div class="single-number-counter mx-auto mb-5 pb-5" data-aos="slide-up" data-aos-offset="200">
+                    <div class="single-number-counter shadow mx-auto mb-5 pb-md-5" data-aos="slide-up">
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Years & Counting</p>
@@ -797,12 +854,7 @@
                             voluptatibus quo eveniet quisquam.
                         </p>
                     </div>
-                    <div
-                        class="single-number-counter mx-auto mb-5 pb-5"
-                        data-aos="slide-up"
-                        data-aos-offset="200"
-                        data-aos-delay="100"
-                    >
+                    <div class="single-number-counter shadow mx-auto mb-5 pb-md-5" data-aos="slide-up">
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Projects</p>
@@ -813,12 +865,7 @@
                             voluptatibus quo eveniet quisquam.
                         </p>
                     </div>
-                    <div
-                        class="single-number-counter mx-auto pb-5"
-                        data-aos="slide-up"
-                        data-aos-offset="200"
-                        data-aos-delay="200"
-                    >
+                    <div class="single-number-counter shadow mx-auto pb-md-5" data-aos="slide-up">
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Audience Reached</p>
@@ -834,48 +881,46 @@
 
             <!-- Our Approachs -->
             <section id="our-approachs" class="container py-5 my-5">
-                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>Our Approachs</h1>
                 </div>
                 <div id="all-our-approachs" class="d-flex align-items-center justify-content-between flex-wrap">
                     <div
-                        class="d-flex align-content-center justify-content-center flex-column w-50 p-lg-5 p-0"
+                        class="mt-5 d-flex align-content-center justify-content-center flex-column w-50"
                         data-aos="slide-up"
-                        data-aos-delay="200"
                     >
-                        <img width="100%" src="images/our-approach/1 Ideation.png" alt="" />
-                        <h5 class="font-b text-center">Ideation</h5>
+                        <img width="144" class="mx-auto" src="images/our-approach/1 Ideation.png" alt="" />
+                        <h5 class="font-b text-center mt-4 mt-md-5">Ideation</h5>
                     </div>
                     <div
-                        class="d-flex align-content-center justify-content-center flex-column w-50"
+                        class="mb-5 d-flex align-content-center justify-content-center flex-column w-50"
                         data-aos="slide-up"
                     >
-                        <img width="100%" src="images/our-approach/2 Planning _ Research.png" alt="" />
-                        <h5 class="font-b text-center">Planning & Research</h5>
+                        <img width="144" class="mx-auto" src="images/our-approach/2 Planning _ Research.png" alt="" />
+                        <h5 class="font-b text-center mt-4">Planning & Research</h5>
                     </div>
                     <div
-                        class="d-flex align-content-center justify-content-center flex-column w-50"
+                        class="mt-5 d-flex align-content-center justify-content-center flex-column w-50"
                         data-aos="slide-up"
-                        data-aos-delay="200"
                     >
-                        <img width="100%" src="images/our-approach/3 Exectuion.png" alt="" />
+                        <img width="144" class="mx-auto" src="images/our-approach/3 Exectuion.png" alt="" />
                         <h5 class="font-b text-center">Execution</h5>
                     </div>
                     <div
-                        class="d-flex align-content-center justify-content-center flex-column w-50"
+                        class="mb-5 d-flex align-content-center justify-content-center flex-column w-50"
                         data-aos="slide-up"
                     >
-                        <img width="100%" src="images/our-approach/4 Better ROI.png" alt="" />
-                        <h5 class="font-b text-center">Brand Engagement</h5>
+                        <img width="144" class="mx-auto" src="images/our-approach/4 Better ROI.png" alt="" />
+                        <h5 class="font-b text-center mt-4">Brand Engagement</h5>
                     </div>
                 </div>
             </section>
 
             <!-- Founder -->
             <section id="founder" class="container-fluid py-5 bg-light">
-                <div id="text-area" class="d-flex align-items-start justify-content-between w-75">
+                <div id="text-area" class="d-flex align-items-start justify-content-center flex-column">
                     <img
-                        class="mr-5"
+                        class="mx-auto mb-4"
                         width="80"
                         height="80"
                         src="https://via.placeholder.com/80"
@@ -883,7 +928,7 @@
                         data-aos="fade-up"
                         data-aos-delay="25"
                     />
-                    <div data-aos="fade-up" data-aos-delay="100" class="pl-5">
+                    <div data-aos="fade-up" data-aos-delay="100" class="text-center">
                         <p>
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit.Incidunt suscipit doloremque fugiat
                             animi dicta ut est aperiam numquam vel."
@@ -896,44 +941,14 @@
 
             <!-- Case Studies -->
             <section id="spotlight" class="container-fluid py-5 mt-4 px-0">
-                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>Case studies</h1>
                 </div>
                 <div id="all-spotlight">
                     <a href="single-case-studies.html" class="single-spotlight" data-aos="slide-up">
-                        <img src="images/casestudies/Castrol wo elements.jpg" alt="" />
+                        <img src="images/casestudies/Castrol.png" alt="" />
                         <div class="spotlight-text">
-                            <div class="font-b text-warning text-center">
-                                <h6>Design <span class="text-white">/</span> Illustration</h6>
-                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
-                                <h2 class="mt-4">→</h2>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-spotlight"
-                        data-aos="slide-up"
-                        data-aos-delay="100"
-                    >
-                        <img src="images/casestudies/Sugarlite wo elements.jpg" alt="" />
-                        <div class="spotlight-text">
-                            <div class="font-b text-warning text-center">
-                                <h6>Design <span class="text-white">/</span> Illustration</h6>
-                                <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
-                                <h2 class="mt-4">→</h2>
-                            </div>
-                        </div>
-                    </a>
-                    <a
-                        href="single-case-studies.html"
-                        class="single-spotlight"
-                        data-aos="slide-up"
-                        data-aos-delay="200"
-                    >
-                        <img src="images/casestudies/Nescafe wo elements.jpg" alt="" />
-                        <div class="spotlight-text">
-                            <div class="font-b text-warning text-center">
+                            <div class="font-b mt-2 text-warning text-center w-75">
                                 <h6>Design <span class="text-white">/</span> Illustration</h6>
                                 <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
                                 <h2 class="mt-4">→</h2>
@@ -941,9 +956,9 @@
                         </div>
                     </a>
                     <a href="single-case-studies.html" class="single-spotlight" data-aos="slide-up">
-                        <img src="images/casestudies/Castrol.png" alt="" />
+                        <img src="images/casestudies/Nescafe.jpg" alt="" />
                         <div class="spotlight-text">
-                            <div class="font-b text-warning text-center">
+                            <div class="font-b mt-2 text-warning text-center w-75">
                                 <h6>Design <span class="text-white">/</span> Illustration</h6>
                                 <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
                                 <h2 class="mt-4">→</h2>
@@ -956,9 +971,9 @@
                         data-aos="slide-up"
                         data-aos-delay="100"
                     >
-                        <img src="images/casestudies/Nescafe.jpg" alt="" />
+                        <img src="images/casestudies/Sugarlite.jpg" alt="" />
                         <div class="spotlight-text">
-                            <div class="font-b text-warning text-center">
+                            <div class="font-b mt-2 text-warning text-center w-75">
                                 <h6>Design <span class="text-white">/</span> Illustration</h6>
                                 <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
                                 <h2 class="mt-4">→</h2>
@@ -969,11 +984,11 @@
                         href="single-case-studies.html"
                         class="single-spotlight"
                         data-aos="slide-up"
-                        data-aos-delay="200"
+                        data-aos-delay="100"
                     >
-                        <img src="images/casestudies/Sugarlite.jpg" alt="" />
+                        <img src="images/casestudies/Castrol.png" alt="" />
                         <div class="spotlight-text">
-                            <div class="font-b text-warning text-center">
+                            <div class="font-b mt-2 text-warning text-center w-75">
                                 <h6>Design <span class="text-white">/</span> Illustration</h6>
                                 <h4 class="text-white">Lorem ipsum dolor sit amet.</h4>
                                 <h2 class="mt-4">→</h2>
@@ -1024,25 +1039,21 @@
 
             var partnerSwiper = new Swiper(".partnerSwiper", {
                 loop: true,
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
+                slidesPerView: 3,
+                spaceBetween: 0,
                 autoplay: {
-                    delay: 4000,
+                    delay: 2000,
                     disableOnInteraction: false,
                 },
                 breakpoints: {
-                    411: {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                    },
                     768: {
                         slidesPerView: 4,
-                        spaceBetween: 40,
                     },
-                    1024: {
+                    992: {
+                        slidesPerView: 4,
+                    },
+                    1200: {
                         slidesPerView: 5,
-                        spaceBetween: 40,
                     },
                 },
             });
@@ -1097,7 +1108,7 @@
             counterSections.forEach((counterSection) => {
                 let done = false;
                 const options = {
-                    rootMargin: "0px 0px -320px 0px",
+                    rootMargin: "0px 0px -200px 0px",
                 };
 
                 const sectionObserver = new IntersectionObserver((entries) => {
