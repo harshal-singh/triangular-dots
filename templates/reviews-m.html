@@ -1,0 +1,206 @@
+<div class="container py-5">
+    <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
+        <h1>Testimonial</h1>
+    </div>
+    <div id="reviews-m" class="d-flex align-content-center justify-content-between flex-column">
+        <div id="review-text-m" class="p-4 mb-5" data-aos="fade">
+            <h5>Clients Feedback</h5>
+            <h2 class="font-b my-4">Clients Love</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eos, vitae esse numquam, mollitia corrupti
+                iure id sint veniam libero deserunt voluptatum recusandae natus fugit debitis earum nobis odit expedita.
+            </p>
+            <div class="review-nav-m mt-5">
+                <button
+                    id="prevReview-m"
+                    class="px-3 py-2 font-b border-dark rounded-circle bg-dark text-white"
+                    disabled="true"
+                >
+                    ←
+                </button>
+                <button id="nextReview-m" class="px-3 py-2 ml-3 font-b border-dark rounded-circle bg-dark text-white">
+                    →
+                </button>
+            </div>
+        </div>
+        <div id="all-reviews-m" class="p-2 w-100" data-aos="slide-up">
+            <div class="single-review-m shadow d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review-m shadow active">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review-m shadow d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review-m shadow d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review-m shadow d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review-m shadow d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+            <div class="single-review-m shadow d-flex align-items-center">
+                <img src="https://via.placeholder.com/64" alt="" />
+                <div>
+                    <h6 class="font-b">Harshal Singh</h6>
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime neque explicabo a amet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #all-reviews-m {
+        height: 460px;
+        overflow: hidden;
+    }
+
+    #all-reviews-m::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .single-review-m {
+        padding: 24px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid #efefef;
+        box-shadow: 0px 6px 12px rgb(0 0 0 / 10%);
+        transition: background-color 200ms ease;
+    }
+
+    .single-review-m.active {
+        color: #fff;
+        background-color: #5c5c5c;
+    }
+
+    .single-review-m:nth-child(even) {
+        margin: 32px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .single-review-m img {
+        margin-right: 16px;
+        border-radius: 50%;
+    }
+
+    .single-review-m p {
+        font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+        .single-review-m:nth-child(even) {
+            margin: 28px 0;
+        }
+    }
+</style>
+<script>
+    // 120px
+    const reviewBox_M = document.getElementById("all-reviews-m");
+    const allReviews_M = document.querySelectorAll(".single-review-m");
+    const nextReview_M = document.getElementById("nextReview-m");
+    const prevReview_M = document.getElementById("prevReview-m");
+
+    const reviewsCount_M = allReviews_M.length;
+    let reviewHeight_M = Math.floor(reviewBox_M.scrollHeight / reviewsCount_M) + 4;
+    let reviewBoxHeight_M = "";
+
+    if (window.innerWidth == 1024) {
+        reviewBoxHeight_M = "522px";
+        reviewHeight_M = Math.floor(reviewBox_M.scrollHeight / reviewsCount_M) + 24;
+    } else if (window.innerWidth <= 768 && window.innerWidth > 564) {
+        reviewHeight_M = Math.floor(reviewBox_M.scrollHeight / reviewsCount_M) + 24;
+        reviewBoxHeight_M = allReviews_M[0].clientHeight * 3 + 160 + "px";
+    } else {
+        reviewHeight_M = Math.floor(reviewBox_M.scrollHeight / reviewsCount_M) + 42;
+        reviewBoxHeight_M = allReviews_M[0].clientHeight * 3 + 210 + "px";
+        console.log(reviewBoxHeight_M);
+    }
+    reviewBox_M.style.height = reviewBoxHeight_M;
+
+    let count_M = 0;
+    let scrollReviewTo_M = 0;
+
+    nextReview_M.onclick = () => {
+        if (count_M <= reviewsCount_M - 3) {
+            scrollReviewTo_M = reviewHeight_M * (count_M + 1);
+            const options = {
+                top: scrollReviewTo_M,
+                behavior: "smooth",
+            };
+            reviewBox_M.scrollTo(options);
+            allReviews_M[count_M + 1].classList.remove("active");
+            allReviews_M[count_M + 2].classList.add("active");
+            count_M++;
+
+            if (reviewsCount_M - 3 == count_M) {
+                nextReview_M.setAttribute("disabled", true);
+                if (prevReview_M.getAttribute("disabled")) {
+                    prevReview_M.removeAttribute("disabled");
+                }
+            }
+        }
+    };
+
+    prevReview_M.onclick = () => {
+        if (count_M <= reviewsCount_M - 3 && count_M > 0) {
+            scrollReviewTo_M = scrollReviewTo_M - reviewHeight_M;
+            const options = {
+                top: scrollReviewTo_M,
+                behavior: "smooth",
+            };
+            reviewBox_M.scrollTo(options);
+            allReviews_M[count_M + 1].classList.remove("active");
+            allReviews_M[count_M].classList.add("active");
+            count_M--;
+
+            if (count_M == 0) {
+                prevReview_M.setAttribute("disabled", true);
+                if (nextReview_M.getAttribute("disabled")) {
+                    nextReview_M.removeAttribute("disabled");
+                }
+            }
+        }
+    };
+</script>

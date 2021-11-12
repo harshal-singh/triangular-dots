@@ -199,7 +199,7 @@
                 }
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
                 #our-partners img {
                     width: 90px;
                 }
@@ -630,10 +630,10 @@
             </section>
 
             <!-- Reviews -->
-            <section class="reviews"></section>
+            <section class="reviews-d"></section>
 
             <!-- Our Blogs -->
-            <section class="blogs"></section>
+            <section class="blogs-d"></section>
 
             <!-- Footer -->
             <div class="footer"></div>
@@ -794,7 +794,7 @@
 
             <!-- Sub Services  -->
             <section id="sub-services" class="container py-5">
-                <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center mt-4 mb-3 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>sub services</h1>
                 </div>
                 <!-- Swiper -->
@@ -941,7 +941,7 @@
 
             <!-- Case Studies -->
             <section id="spotlight" class="container-fluid py-5 mt-4 px-0">
-                <div class="text-uppercase text-center my-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
+                <div class="text-uppercase text-center mt-5 mb-5 my-md-5 pb-3 font-xb" data-aos="slide-up">
                     <h1>Case studies</h1>
                 </div>
                 <div id="all-spotlight">
@@ -999,10 +999,10 @@
             </section>
 
             <!-- Reviews -->
-            <section class="reviews"></section>
+            <section class="reviews-m"></section>
 
             <!-- Our Blogs -->
-            <section class="blogs"></section>
+            <section class="blogs-m"></section>
 
             <!-- Footer -->
             <div class="footer"></div>
@@ -1021,8 +1021,10 @@
             // Add custom javascript and jquery here
             $(".nav").load("templates/nav.html");
             $(".services").load("templates/services.html");
-            $(".reviews").load("templates/reviews.html");
-            $(".blogs").load("templates/blogs.html");
+            $(".reviews-d").load("templates/reviews-d.html");
+            $(".reviews-m").load("templates/reviews-m.html");
+            $(".blogs-d").load("templates/blogs-d.html");
+            $(".blogs-m").load("templates/blogs-m.html");
             $(".footer").load("templates/footer.html");
 
             var heroSwiper = new Swiper(".heroSwiper", {
@@ -1039,6 +1041,7 @@
 
             var partnerSwiper = new Swiper(".partnerSwiper", {
                 loop: true,
+                grabCursor: true,
                 slidesPerView: 3,
                 spaceBetween: 0,
                 autoplay: {

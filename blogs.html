@@ -1,203 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Enter a proper page title here -->
         <title>Triangular Dots</title>
-        <!-- Link Swiper's CSS -->
+
+        <!-- CSS to include bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/aos.css" />
+        <!-- css to include style.css -->
         <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- required meta tags essential for seo and link sharing -->
+
+        <!-- Enter a proper description for the page in the meta description tag -->
+        <meta name="description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter a keywords for the page in tag -->
+        <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+        <!-- Enter Page title -->
+        <meta property="og:title" content="ENTER_PAGE_TITLE" />
+
+        <!-- Enter Page URL -->
+        <meta property="og:url" content="ENTER_PAGE_URL" />
+
+        <!-- Enter page description -->
+        <meta property="og:description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter Logo image URL for example : http://ww.example.com/images/logo.png -->
+        <meta property="og:image" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:secure_url" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+        <link rel="icon" href="ENTER_FAVICON_LOCATION" />
+
+        <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
         <style>
-            #blogs {
-                margin: 64px 120px;
-            }
-
-            #filter-sort-search {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 64px;
-            }
-
-            #sort,
-            #filter {
-                outline: 0;
-                padding: 12px 16px;
-                border: 1px solid #c5c5c5;
-                text-transform: capitalize;
-                margin-right: 24px;
-            }
-
-            input {
-                width: 290px;
-                outline: 0;
-                padding: 12px 16px;
-                border: 1px solid #c5c5c5;
-                margin-right: 24px;
-            }
-
             #all-blogs {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 48px 36px;
             }
 
-            .single-blogs {
-                position: relative;
-                width: 400px;
-                height: 260px;
-                margin-bottom: 180px;
+            @media (max-width: 1200px) {
+                #all-blogs {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 48px 36px;
+                }
             }
 
-            .blog-image {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                border-radius: 10px;
-            }
-
-            .b-image {
-                width: 100%;
-                height: 100%;
-                transition: all 800ms ease;
-            }
-
-            .single-blogs:hover .b-image {
-                transform: scale(1.2);
-            }
-
-            .blog-text {
-                width: 90%;
-                position: absolute;
-                top: 70%;
-                left: 50%;
-                padding: 28px 20px;
-                border-radius: 10px;
-                border-bottom-right-radius: 60px;
-                transform: translateX(-50%);
-                max-width: fit-content;
-                background-color: #fff;
-                box-shadow: 0 12px 48px rgba(0 0 0 / 10%);
-            }
-
-            .blog-text h3 {
-                margin: 16px 0 20px 0;
-            }
-
-            .blog-text a {
-                font-size: 24px;
-                font-weight: 600;
+            @media (max-width: 480px) {
+                #all-blogs {
+                    grid-template-columns: 1fr;
+                    grid-gap: 48px 0;
+                }
             }
         </style>
     </head>
+
     <body>
-        <main>
-            <div class="navigation"></div>
+        <!-- desktop view -->
+        <div class="d-none d-lg-block">
+            <!-- Navbar -->
+            <div class="nav"></div>
 
-            <section class="page-heading">
-                <h1 data-aos="fade-in">Our Blogs</h1>
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 data-aos="fade-in">our blogs</h1>
             </section>
 
-            <section id="blogs">
-                <div id="filter-sort-search">
-                    <div>
-                        <select name="sort" id="sort">
-                            <option value="sort option">sort option</option>
-                            <option value="latest">latest</option>
-                            <option value="oldest">oldest</option>
-                            <option value="a-z">a-z</option>
-                            <option value="z-a">z-a</option>
-                        </select>
-                        <select name="filter" id="filter">
-                            <option value="filter option">filter option</option>
-                            <option value="option 1">option 1</option>
-                            <option value="option 2">option 2</option>
-                            <option value="option 3">option 3</option>
-                            <option value="option 4">option 4</option>
-                        </select>
-                    </div>
-                    <div>
-                        <input type="search" name="search" id="search" placeholder="Search for post here" />
-                        <button>Search</button>
-                    </div>
-                </div>
-                <div id="all-blogs">
-                    <div class="single-blogs" data-aos="slide-up">
-                        <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+            <!-- blogs -->
+            <section class="container py-5 mt-3 mb-5">
+                <form class="font-m d-flex justify-content-between border-bottom mb-5 pb-4" data-aos="fade">
+                    <div class="col-4 d-flex">
+                        <div class="col-6 px-0 mr-3">
+                            <select class="form-control" name="" id="">
+                                <option value="default">Filter</option>
+                                <option value="option 1">Option 1</option>
+                                <option value="option 2">Option 2</option>
+                                <option value="option 3">Option 3</option>
+                                <option value="option 4">Option 4</option>
+                            </select>
                         </div>
-                        <div class="blog-text">
+                        <div class="col-6 px-0">
+                            <select class="form-control" name="" id="">
+                                <option value="default">Sort</option>
+                                <option value="option 1">Option 1</option>
+                                <option value="option 2">Option 2</option>
+                                <option value="option 3">Option 3</option>
+                                <option value="option 4">Option 4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex align-items-end">
+                        <input type="search" name="" id="" class="form-control" placeholder="Search for blog..." />
+                        <div class="ml-2">
+                            <button type="button" name="" id="" class="btn btn-secondary text-uppercase">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="all-blogs" class="pt-3">
+                    <div class="single-blogs shadow" data-aos="slide-up">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
                             <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
                             <a href="single-blog.html">→</a>
                         </div>
                     </div>
-                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text">
+                        <div class="blog-text p-4">
                             <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
                             <a href="single-blog.html">→</a>
                         </div>
                     </div>
-                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="200">
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="200">
                         <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text">
+                        <div class="blog-text p-4">
                             <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
                             <a href="single-blog.html">→</a>
                         </div>
                     </div>
-                    <div class="single-blogs" data-aos="slide-up">
+                    <div class="single-blogs shadow" data-aos="slide-up">
                         <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text">
+                        <div class="blog-text p-4">
                             <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
                             <a href="single-blog.html">→</a>
                         </div>
                     </div>
-                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text">
+                        <div class="blog-text p-4">
                             <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
                             <a href="single-blog.html">→</a>
                         </div>
                     </div>
-                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="200">
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="200">
                         <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
+                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
                         </div>
-                        <div class="blog-text">
+                        <div class="blog-text p-4">
                             <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="200">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
                             <a href="single-blog.html">→</a>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Footer -->
             <div class="footer"></div>
-        </main>
+        </div>
 
-        <!-- script -->
+        <!-- mobile view -->
+        <div class="d-lg-none position-relative">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 class="pt-5" data-aos="fade-in">our blogs</h1>
+            </section>
+
+            <!-- blogs -->
+            <section class="container py-5 mt-3 mb-5">
+                <form class="font-m border-bottom mb-5 pb-4" data-aos="fade">
+                    <div class="col-12 px-0 mb-4 d-flex align-items-end">
+                        <input type="search" name="" id="" class="form-control" placeholder="Search for blog..." />
+                        <div class="col-4 pr-0">
+                            <button type="button" name="" id="" class="btn btn-secondary text-uppercase w-100">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex px-0">
+                        <div class="col-6 pl-0">
+                            <select class="form-control" name="" id="">
+                                <option value="default">Filter</option>
+                                <option value="option 1">Option 1</option>
+                                <option value="option 2">Option 2</option>
+                                <option value="option 3">Option 3</option>
+                                <option value="option 4">Option 4</option>
+                            </select>
+                        </div>
+                        <div class="col-6 px-0">
+                            <select class="form-control" name="" id="">
+                                <option value="default">Sort</option>
+                                <option value="option 1">Option 1</option>
+                                <option value="option 2">Option 2</option>
+                                <option value="option 3">Option 3</option>
+                                <option value="option 4">Option 4</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <div id="all-blogs" class="pt-3">
+                    <div class="single-blogs shadow" data-aos="slide-up">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                        </div>
+                        <div class="blog-text p-4">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <a href="single-blog.html">→</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Blogs -->
+            <section class="blogs-m"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Initialize Swiper -->
         <script>
-            $(".navigation").load("templates/nav.html");
+            // Add custom javascript and jquery here
+            $(".nav").load("templates/nav.html");
             $(".footer").load("templates/footer.html");
         </script>
     </body>

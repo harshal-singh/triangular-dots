@@ -1,152 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Enter a proper page title here -->
         <title>Triangular Dots</title>
-        <!-- Link Swiper's CSS -->
+
+        <!-- CSS to include bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/aos.css" />
+        <!-- css to include style.css -->
         <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- required meta tags essential for seo and link sharing -->
+
+        <!-- Enter a proper description for the page in the meta description tag -->
+        <meta name="description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter a keywords for the page in tag -->
+        <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+        <!-- Enter Page title -->
+        <meta property="og:title" content="ENTER_PAGE_TITLE" />
+
+        <!-- Enter Page URL -->
+        <meta property="og:url" content="ENTER_PAGE_URL" />
+
+        <!-- Enter page description -->
+        <meta property="og:description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter Logo image URL for example : http://ww.example.com/images/logo.png -->
+        <meta property="og:image" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:secure_url" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+        <link rel="icon" href="ENTER_FAVICON_LOCATION" />
+
+        <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
         <style>
             #our-details {
-                padding: 120px;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                grid-gap: 80px 20px;
-                /* color: #fff;
-                background-color: #242424; */
-            }
-
-            .singel-our-details {
-                width: 100%;
-                display: flex;
-                align-items: flex-start;
-            }
-
-            .singel-our-details img {
-                margin-right: 18px;
-            }
-
-            .singel-our-details small {
-                font-weight: 500;
-            }
-
-            .singel-our-details h3 {
-                margin: 8px 0 18px 0;
-                font-size: 21px;
+                grid-column-gap: 40px;
             }
 
             .singel-our-details p {
-                /* color: #dddddd; */
-                font-size: 15px;
-                line-height: 1.6;
-                font-weight: lighter;
-                margin-bottom: 24px;
+                font-size: 14px;
+                min-height: 84px;
             }
 
-            .singel-our-details a,
-            .singel-our-details h1 {
-                height: 30px;
-                display: block;
-            }
-
-            .note {
-                width: 100%;
+            .singel-our-details h2,
+            .singel-our-details a {
                 display: flex;
-                align-items: flex-start;
-                /* color: #dddddd; */
-                font-size: 13px;
-                margin-top: 24px;
-                padding-top: 20px;
-                border-top: 1px solid #c5c5c5;
+                min-height: 48px;
+                align-items: center;
+                margin-bottom: 20px;
             }
 
-            .note img {
-                margin-right: 12px;
+            .note p {
+                font-size: 12px;
             }
 
-            #message {
-                margin: 120px;
+            @media (max-width: 768px) {
+                #our-details {
+                    grid-template-columns: 1fr;
+                    grid-column-gap: 0px;
+                }
+
+                #message form,
+                #our-details .mx-auto {
+                    width: 75%;
+                }
+
+                .singel-our-details p {
+                    min-height: 44px;
+                }
+
+                .singel-our-details h2,
+                .singel-our-details a {
+                    min-height: unset;
+                }
             }
 
-            #message form {
-                display: flex;
-                flex-direction: column;
-                width: 75%;
-                margin: 0 auto;
-            }
-
-            form input,
-            form textarea {
-                outline: none;
-                padding: 16px;
-                border: 1px solid #c5c5c5;
-                margin: 24px 0;
-            }
-
-            form div {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            form div input {
-                width: 48%;
-            }
-
-            #send-message {
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 24px;
-                background-color: transparent;
-            }
-
-            #back-to-homepage {
-                width: 100%;
-                display: block;
-                padding: 56px 0;
-                text-align: center;
-                background-color: #c5c5c5;
-            }
-
-            footer {
-                margin-top: 0 !important;
+            @media (max-width: 480px) {
+                #message form,
+                #our-details .mx-auto {
+                    width: 95%;
+                }
             }
         </style>
     </head>
-    <body>
-        <main>
-            <div class="navigation"></div>
 
-            <section class="page-heading">
+    <body>
+        <!-- desktop view -->
+        <div class="d-none d-lg-block">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
                 <h1 data-aos="fade-in">Contact us</h1>
             </section>
 
-            <section id="our-details">
-                <div>
-                    <div class="singel-our-details" data-aos="fade-up">
-                        <img src="https://via.placeholder.com/64x64" alt="" />
+            <!-- Contact Details -->
+            <section id="our-details" class="container py-5 px-0">
+                <div class="my-5">
+                    <div class="singel-our-details w-100 d-flex align-items-start" data-aos="fade-up">
+                        <img class="mr-3" src="https://via.placeholder.com/48" alt="" />
                         <div>
-                            <small>Hours</small>
-                            <h3>Working hours</h3>
+                            <small class="font-m">Hours</small>
+                            <h4 class="font-b mt-2">Working hours</h4>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
                                 commodi cumque dolore.
                             </p>
-                            <h1>09-18h</h1>
+                            <h2 class="font-m">09-18h</h2>
                         </div>
                     </div>
-                    <div class="note">
-                        <img src="https://via.placeholder.com/24x24" alt="" />
+                    <div class="note border-top pt-4 d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/24x24" alt="" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
                     </div>
                 </div>
-                <div>
-                    <div class="singel-our-details" data-aos="fade-up">
-                        <img src="https://via.placeholder.com/64x64" alt="" />
+                <div class="my-5">
+                    <div class="singel-our-details w-100 d-flex align-items-start" data-aos="fade-up">
+                        <img class="mr-3" src="https://via.placeholder.com/48" alt="" />
                         <div>
-                            <small>Direct</small>
-                            <h3>Our call center</h3>
+                            <small class="font-m">Direct</small>
+                            <h4 class="font-b mt-2">Our call center</h4>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
                                 commodi cumque dolore.
@@ -154,17 +140,17 @@
                             <a href="#">→ &nbsp; Call us via Skype</a>
                         </div>
                     </div>
-                    <div class="note">
-                        <img src="https://via.placeholder.com/24x24" alt="" />
+                    <div class="note border-top pt-4 d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/24x24" alt="" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
                     </div>
                 </div>
-                <div>
-                    <div class="singel-our-details" data-aos="fade-up">
-                        <img src="https://via.placeholder.com/64x64" alt="" />
+                <div class="my-5">
+                    <div class="singel-our-details w-100 d-flex align-items-start" data-aos="fade-up">
+                        <img class="mr-3" src="https://via.placeholder.com/48" alt="" />
                         <div>
-                            <small>Direct</small>
-                            <h3>Our location</h3>
+                            <small class="font-m">Direct</small>
+                            <h4 class="font-b mt-2">Our location</h4>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
                                 commodi cumque dolore.
@@ -172,57 +158,255 @@
                             <a href="#">→ &nbsp; Get location</a>
                         </div>
                     </div>
-                    <div class="note">
-                        <img src="https://via.placeholder.com/24x24" alt="" />
+                    <div class="note border-top pt-4 d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/24x24" alt="" />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
                     </div>
                 </div>
             </section>
 
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.34734976107!2d72.82915310000001!3d19.1362669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63cf4f29961%3A0xd12a436b2a3b3e4b!2sTriangular%20Dots%20Creative%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1635530721250!5m2!1sen!2sin"
-                width="100%"
-                height="480"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-            ></iframe>
+            <!-- Google Map -->
+            <section class="container-fluid px-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.34734976107!2d72.82915310000001!3d19.1362669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63cf4f29961%3A0xd12a436b2a3b3e4b!2sTriangular%20Dots%20Creative%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1635530721250!5m2!1sen!2sin"
+                    width="100%"
+                    height="480"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </section>
 
-            <section id="message">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Send us a message</h2>
+            <!-- Message -->
+            <section id="message" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Send us a message</h1>
                 </div>
-                <form data-aos="slide-up">
-                    <div>
-                        <input type="text" name="username" id="username" placeholder="Your full name" />
-                        <input type="email" name="useremail" id="useremail" placeholder="Your e-mail address" />
+                <form class="w-75 mx-auto" data-aos="slide-up">
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-6">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your full name"
+                            />
+                        </div>
+                        <div class="col-6">
+                            <input
+                                type="email"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your email address"
+                            />
+                        </div>
                     </div>
-                    <input type="url" name="userwebsiteurl" id="userwebsiteurl" placeholder="Your website / URL" />
-                    <textarea
-                        name="usermessage"
-                        id="usermessage"
-                        cols="30"
-                        rows="10"
-                        placeholder="Write your message here"
-                    ></textarea>
-                    <button id="send-message">Send message</button>
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-12">
+                            <input
+                                type="url"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your website / URL"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-5 pt-2">
+                        <textarea
+                            class="form-control"
+                            name="your-message"
+                            id="your-message"
+                            placeholder="Write your message here"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <button type="submit" class="btn btn-light w-25 mx-auto">Send Message</button>
+                        </div>
+                    </div>
                 </form>
             </section>
 
-            <a href="/triangular-dots" id="back-to-homepage">→ &nbsp; Back to Homepage</a>
+            <!-- Back to Home -->
+            <section class="container-fluid py-5 px-0">
+                <a href="/triangular-dots" class="d-block w-100 py-5 bg-secondary text-center text-white"
+                    >→ &nbsp; Back to Homepage</a
+                >
+            </section>
 
+            <!-- Our Blogs -->
+            <section class="blogs-d"></section>
+
+            <!-- Footer -->
             <div class="footer"></div>
-        </main>
+        </div>
 
-        <!-- script -->
+        <!-- mobile view -->
+        <div class="d-lg-none position-relative">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 class="pt-5" data-aos="fade-in">Contact us</h1>
+            </section>
+
+            <!-- Contact Details -->
+            <section id="our-details" class="container py-5">
+                <div class="mt-5 mx-auto" data-aos="fade-up">
+                    <div class="singel-our-details d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/48" alt="" />
+                        <div>
+                            <small class="font-m">Hours</small>
+                            <h4 class="font-b mt-2">Working hours</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
+                                commodi cumque dolore.
+                            </p>
+                            <h2 class="font-m">09-18h</h2>
+                        </div>
+                    </div>
+                    <div class="note border-top pt-4 d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/24x24" alt="" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
+                    </div>
+                </div>
+                <div class="mt-5 mx-auto" data-aos="fade-up">
+                    <div class="singel-our-details d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/48" alt="" />
+                        <div>
+                            <small class="font-m">Direct</small>
+                            <h4 class="font-b mt-2">Our call center</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
+                                commodi cumque dolore.
+                            </p>
+                            <a href="#">→ &nbsp; Call us via Skype</a>
+                        </div>
+                    </div>
+                    <div class="note border-top pt-4 d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/24x24" alt="" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
+                    </div>
+                </div>
+                <div class="my-5 mx-auto" data-aos="fade-up">
+                    <div class="singel-our-details d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/48" alt="" />
+                        <div>
+                            <small class="font-m">Direct</small>
+                            <h4 class="font-b mt-2">Our location</h4>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat laboriosam recusandae
+                                commodi cumque dolore.
+                            </p>
+                            <a href="#">→ &nbsp; Get location</a>
+                        </div>
+                    </div>
+                    <div class="note border-top pt-4 d-flex align-items-start">
+                        <img class="mr-3" src="https://via.placeholder.com/24x24" alt="" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequuntur?</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google Map -->
+            <section class="container-fluid px-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.34734976107!2d72.82915310000001!3d19.1362669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63cf4f29961%3A0xd12a436b2a3b3e4b!2sTriangular%20Dots%20Creative%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1635530721250!5m2!1sen!2sin"
+                    width="100%"
+                    height="480"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                ></iframe>
+            </section>
+
+            <!-- Message -->
+            <section id="message" class="container py-5">
+                <div class="text-uppercase text-center mt-5 mb-4 my-md-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Send us a message</h1>
+                </div>
+                <form class="mx-auto" data-aos="slide-up">
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-12 mb-4">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your full name"
+                            />
+                        </div>
+                        <div class="col-12">
+                            <input
+                                type="email"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your email address"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-12">
+                            <input
+                                type="url"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your website / URL"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-4 pt-2">
+                        <textarea
+                            class="form-control"
+                            name="your-message"
+                            id="your-message"
+                            placeholder="Write your message here"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <button type="submit" class="btn btn-light w-100 mx-auto">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Back to Home -->
+            <section class="container-fluid py-5 px-0">
+                <a href="/triangular-dots" class="d-block w-100 py-5 bg-secondary text-center text-white"
+                    >→ &nbsp; Back to Homepage</a
+                >
+            </section>
+
+            <!-- Our Blogs -->
+            <section class="blogs-m"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Initialize Swiper -->
         <script>
-            $(".navigation").load("templates/nav.html");
+            // Add custom javascript and jquery here
+            $(".nav").load("templates/nav.html");
+            $(".blogs-d").load("templates/blogs-d.html");
+            $(".blogs-m").load("templates/blogs-m.html");
             $(".footer").load("templates/footer.html");
         </script>
     </body>

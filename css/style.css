@@ -22,6 +22,16 @@
 }
 
 @font-face {
+    font-family: montserrat-sb;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+    font-display: swap;
+}
+
+.font-sb {
+    font-family: montserrat-sb;
+}
+
+@font-face {
     font-family: montserrat-m;
     src: url(../fonts/Montserrat-Medium.ttf);
     font-display: swap;
@@ -97,6 +107,55 @@ nav.nav-fixed {
     background-color: #fff;
 }
 
+/* ------------------------ page heading ------------------------ */
+
+.page-heading {
+    width: 100%;
+    height: 400px;
+    background: #c5c5c5;
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+}
+
+.page-heading h1 {
+    position: relative;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.page-heading h1::after {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    content: "";
+    width: 200px;
+    height: 25px;
+    background-image: radial-gradient(#fff 20%, transparent 20%), radial-gradient(#fff 20%, transparent 20%);
+    background-size: 6px 6px;
+}
+
+/* ------------------------ section heading ------------------------ */
+
+.section-heading {
+    position: relative;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 84px;
+}
+
+.section-heading::after {
+    position: absolute;
+    left: 0;
+    bottom: -52px;
+    content: "";
+    width: 160px;
+    height: 18px;
+    background-image: radial-gradient(#272727 20%, transparent 20%), radial-gradient(#272727 20%, transparent 20%);
+    background-size: 6px 6px;
+}
+
 /* ------------------------ media 1440 ------------------------ */
 
 @media (max-width: 1440px) {
@@ -105,22 +164,60 @@ nav.nav-fixed {
     }
 }
 
+/* ------------------------ media 1200 ------------------------ */
+
+@media (max-width: 1200px) {
+    .section-heading {
+        margin-bottom: 36px;
+    }
+
+    .section-heading::after {
+        content: unset;
+    }
+
+    .page-heading h1::after {
+        height: 26px;
+        background-size: 7px 7px;
+    }
+}
+
 /* ------------------------ media 768 ------------------------ */
 
 @media (max-width: 768px) {
     nav {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
         background-color: #fff;
+    }
+
+    nav.nav-fixed {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .section-heading {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
     }
 }
 
-/* ------------------------ media 425 ------------------------ */
+/* ------------------------ media 480 ------------------------ */
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
     h1 {
         font-size: 1.6rem;
     }
 
     h5 {
         font-size: 1rem;
+    }
+
+    .page-heading h1::after {
+        width: 160px;
+        background-size: 6px 6px;
+    }
+
+    .section-heading {
+        font-size: 1.4rem;
     }
 }
