@@ -2,110 +2,46 @@
     <div class="text-uppercase text-center mt-4 mb-5 pb-3 font-xb" data-aos="slide-up">
         <h1>our blogs</h1>
     </div>
-    <div id="all-blogs" class="d-flex align-items-center justify-content-between">
+    <div id="all-blogs">
         <div class="single-blogs" data-aos="slide-up">
             <div class="blog-image">
                 <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
             </div>
-            <div class="blog-text p-4 shadow">
+            <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                 <small>Personal / June 13, 2021</small>
                 <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                <a href="single-blog.html">→</a>
-            </div>
+                <h4 class="mb-0 font-m">→</h4>
+            </a>
         </div>
         <div class="single-blogs" data-aos="slide-up">
             <div class="blog-image">
                 <img class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
             </div>
-            <div class="blog-text p-4 shadow">
+            <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                 <small>Personal / June 13, 2021</small>
                 <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                <a href="single-blog.html">→</a>
-            </div>
+                <h4 class="mb-0 font-m">→</h4>
+            </a>
         </div>
         <div class="single-blogs" data-aos="slide-up">
             <div class="blog-image">
                 <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
             </div>
-            <div class="blog-text p-4 shadow">
+            <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                 <small>Personal / June 13, 2021</small>
                 <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                <a href="single-blog.html">→</a>
+                <h4 class="mb-0 font-m">→</h4>
+            </a>
+        </div>
+        <div class="single-blogs d-none d-md-block" data-aos="slide-up">
+            <div class="blog-image">
+                <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
             </div>
+            <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
+                <small>Personal / June 13, 2021</small>
+                <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                <h4 class="mb-0 font-m">→</h4>
+            </a>
         </div>
     </div>
 </div>
-<style>
-    /* our blog */
-    #blogs {
-        margin-bottom: 180px;
-    }
-
-    .single-blogs {
-        position: relative;
-        width: 31%;
-        height: 224px;
-    }
-
-    .blog-image {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        border-radius: 10px;
-    }
-
-    .b-image {
-        width: 100%;
-        height: 100%;
-        transition: all 800ms ease;
-    }
-
-    .single-blogs:hover .b-image {
-        transform: scale(1.2);
-    }
-
-    .blog-text {
-        width: 90%;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        border-radius: 10px;
-        border-bottom-right-radius: 48px;
-        transform: translateX(-50%);
-        max-width: fit-content;
-        background-color: #fff;
-    }
-
-    .blog-text a {
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-        #blogs {
-            margin-bottom: 0;
-        }
-
-        .single-blogs {
-            width: 75%;
-            height: 275px;
-            margin-bottom: 140px;
-        }
-
-        #all-blogs {
-            flex-direction: column;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .single-blogs {
-            width: 95%;
-            height: 240px;
-            margin-bottom: 150px;
-        }
-
-        .single-blogs:nth-child(3) {
-            margin-bottom: 130px;
-        }
-    }
-</style>

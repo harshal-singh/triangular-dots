@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Redirect -->
+        <script>
+            location.pathname !== "/triangular-dots/index.html" || location.pathname !== "/triangular-dots/"
+                ? location.replace("/triangular-dots/")
+                : console.log("home page");
+        </script>
+
         <!-- Enter a proper page title here -->
         <title>Triangular Dots</title>
 
@@ -42,27 +49,6 @@
         <link rel="icon" href="ENTER_FAVICON_LOCATION" />
 
         <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
-        <style>
-            #all-blogs {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 48px 36px;
-            }
-
-            @media (max-width: 1200px) {
-                #all-blogs {
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-gap: 48px 36px;
-                }
-            }
-
-            @media (max-width: 480px) {
-                #all-blogs {
-                    grid-template-columns: 1fr;
-                    grid-gap: 48px 0;
-                }
-            }
-        </style>
     </head>
 
     <body>
@@ -102,100 +88,100 @@
                     <div class="col-4 d-flex align-items-end">
                         <input type="search" name="" id="" class="form-control" placeholder="Search for blog..." />
                         <div class="ml-2">
-                            <button type="button" name="" id="" class="btn btn-secondary text-uppercase">Search</button>
+                            <button type="button" name="" id="" class="btn btn-secondary">Search</button>
                         </div>
                     </div>
                 </form>
                 <div id="all-blogs" class="pt-3">
-                    <div class="single-blogs shadow" data-aos="slide-up">
+                    <div class="single-blogs" data-aos="slide-up">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="200">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="200">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up">
+                    <div class="single-blogs" data-aos="slide-up">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="200">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up">
+                    <div class="single-blogs" data-aos="slide-up">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="200">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="200">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow-lg">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -215,14 +201,12 @@
             </section>
 
             <!-- blogs -->
-            <section class="container py-5 mt-3 mb-5">
-                <form class="font-m border-bottom mb-5 pb-4" data-aos="fade">
+            <section class="container py-md-5 py-4 mt-md-3 mt-0 mb-5">
+                <form class="font-m border-bottom mb-md-5 mb-4 pb-4" data-aos="fade">
                     <div class="col-12 px-0 mb-4 d-flex align-items-end">
                         <input type="search" name="" id="" class="form-control" placeholder="Search for blog..." />
                         <div class="col-4 pr-0">
-                            <button type="button" name="" id="" class="btn btn-secondary text-uppercase w-100">
-                                Search
-                            </button>
+                            <button type="button" name="" id="" class="btn btn-secondary w-100">Search</button>
                         </div>
                     </div>
                     <div class="col-12 d-flex px-0">
@@ -247,71 +231,88 @@
                     </div>
                 </form>
                 <div id="all-blogs" class="pt-3">
-                    <div class="single-blogs shadow" data-aos="slide-up">
+                    <div class="single-blogs" data-aos="slide-up">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up">
+                    <div class="single-blogs" data-aos="slide-up">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up">
+                    <div class="single-blogs" data-aos="slide-up">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 2.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
-                        </div>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
-                    <div class="single-blogs shadow" data-aos="slide-up" data-aos-delay="100">
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
                         <div class="blog-image">
-                            <img width="100%" class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
+                            <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
-                        <div class="blog-text p-4">
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
                             <small>Personal / June 13, 2021</small>
-                            <h6 class="font-sb mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                            <a href="single-blog.html">→</a>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
+                    </div>
+                    <div class="single-blogs" data-aos="slide-up">
+                        <div class="blog-image">
+                            <img class="b-image" src="images/blogs/Blog 3.jpg" alt="" />
                         </div>
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
+                    </div>
+                    <div class="single-blogs" data-aos="slide-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img class="b-image" src="images/blogs/Blog 1.jpg" alt="" />
+                        </div>
+                        <a href="/single-blog.html" class="blog-text bg-white p-4 shadow">
+                            <small>Personal / June 13, 2021</small>
+                            <h6 class="font-b mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                            <h4 class="mb-0 font-m">→</h4>
+                        </a>
                     </div>
                 </div>
             </section>
-
-            <!-- Our Blogs -->
-            <section class="blogs-m"></section>
 
             <!-- Footer -->
             <div class="footer"></div>

@@ -54,12 +54,6 @@
                 height: 100%;
             }
 
-            #hero .swiper-slide {
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
             /* Our Partner */
             #our-partners .swiper-slide {
                 display: grid;
@@ -84,8 +78,7 @@
                 padding: 28px;
                 background-color: #fff;
                 border-bottom-right-radius: 60px;
-                box-shadow: 0px 12px 48px rgb(0 0 0 / 10%);
-                border: 1px solid #eee;
+                /* box-shadow: 0px 12px 48px rgb(0 0 0 / 10%); */
             }
 
             .single-number-counter:hover {
@@ -191,7 +184,7 @@
 
             @media (max-width: 768px) {
                 .single-number-counter {
-                    max-width: 75%;
+                    max-width: 100%;
                 }
 
                 #all-our-approachs div:nth-child(odd) {
@@ -218,7 +211,11 @@
                 }
 
                 .single-number-counter {
-                    max-width: 95%;
+                    max-width: 100%;
+                }
+
+                .single-number-counter h1 {
+                    font-size: 2rem;
                 }
 
                 #text-area {
@@ -244,20 +241,20 @@
                 <div class="swiper heroSwiper">
                     <div class="swiper-wrapper">
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -437,7 +434,7 @@
                     class="counter__section d-flex align-content-center justify-content-between"
                     id="all-number-counter"
                 >
-                    <div class="single-number-counter shadow-lg" data-aos="slide-up" data-aos-offset="100">
+                    <div class="single-number-counter shadow" data-aos="slide-up" data-aos-offset="100">
                         <h4 class="d-flex">
                             <img class="mr-3" src="https://via.placeholder.com/48" width="48" height="48" alt="" />
                             <p class="font-m mb-0">Years & Counting</p>
@@ -446,7 +443,7 @@
                         <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div
-                        class="single-number-counter shadow-lg"
+                        class="single-number-counter shadow"
                         data-aos="slide-up"
                         data-aos-offset="100"
                         data-aos-delay="100"
@@ -459,7 +456,7 @@
                         <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                     <div
-                        class="single-number-counter shadow-lg"
+                        class="single-number-counter shadow"
                         data-aos="slide-up"
                         data-aos-offset="100"
                         data-aos-delay="200"
@@ -650,20 +647,20 @@
                 <div class="swiper heroSwiper">
                     <div class="swiper-wrapper">
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                         <div
-                            class="swiper-slide"
-                            style="background-image: url('https://via.placeholder.com/1280x720')"
+                            class="swiper-slide bg-image"
+                            style="background-image: url('https://via.placeholder.com/1280x740')"
                         ></div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -1097,7 +1094,7 @@
                         let displayedCount = +counter.innerText;
                         if (displayedCount < target) {
                             counter.innerText = Math.ceil(displayedCount + step);
-                            setTimeout(countIt, 1);
+                            setTimeout(countIt, 10);
                         } else {
                             counter.innerText = target;
                         }

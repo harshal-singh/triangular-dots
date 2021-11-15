@@ -1,242 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Redirect -->
+        <script>
+            location.pathname !== "/triangular-dots/index.html" || location.pathname !== "/triangular-dots/"
+                ? location.replace("/triangular-dots/")
+                : console.log("home page");
+        </script>
+
+        <!-- Enter a proper page title here -->
         <title>Triangular Dots</title>
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+        <!-- CSS to include bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/aos.css" />
+        <!-- css to include style.css -->
         <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- required meta tags essential for seo and link sharing -->
+
+        <!-- Enter a proper description for the page in the meta description tag -->
+        <meta name="description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter a keywords for the page in tag -->
+        <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+        <!-- Enter Page title -->
+        <meta property="og:title" content="ENTER_PAGE_TITLE" />
+
+        <!-- Enter Page URL -->
+        <meta property="og:url" content="ENTER_PAGE_URL" />
+
+        <!-- Enter page description -->
+        <meta property="og:description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter Logo image URL for example : http://ww.example.com/images/logo.png -->
+        <meta property="og:image" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:secure_url" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+        <link rel="icon" href="ENTER_FAVICON_LOCATION" />
+
+        <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
         <style>
-            #blog-container {
-                margin: 120px;
-            }
-
-            #left {
-                padding-bottom: 28px;
-                margin-bottom: 80px;
-                border-bottom: 1px solid #5c5c5c;
-            }
-
-            #left img {
-                width: 100%;
+            #blog-details img {
                 border-radius: 10px;
             }
 
-            figcaption {
-                margin-top: 24px;
+            #blog-details p {
+                font-size: 15px;
+                line-height: 2;
             }
 
-            #left p {
-                line-height: 1.8;
+            #blog-details .border-left {
+                border-radius: 10px;
+                border-width: 4px !important;
             }
 
-            #text li {
-                list-style-type: disc;
+            .styled-ul li {
+                list-style-type: "▶";
                 list-style-position: inside;
-                padding-left: 16px;
             }
 
-            #text li a {
-                display: inline-block;
-                margin: 10px;
-                padding: 0 10px;
-            }
-
-            #text h2 {
-                margin: 48px 0 28px 0;
-            }
-
-            #text h3 {
-                margin: 48px 0 24px 0;
-                font-weight: 500;
-            }
-
-            small {
-                font-weight: 500;
-                padding: 6px 0;
-            }
-
-            #quote {
-                width: 100%;
-                height: 200px;
-                border-radius: 10px;
-                margin: 40px 0;
-                padding: 0 56px;
-                display: grid;
-                place-items: center;
-                background-color: #efefef;
-                border-left: 4px solid #5c5c5c;
-            }
-
-            #tags h3 {
-                margin-top: 36px;
-                margin-bottom: 16px;
-            }
-
-            /* our blog */
-            #blogs {
-                margin: 100px 120px 180px 120px;
-            }
-
-            #all-blogs {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .single-blogs {
-                position: relative;
-                width: 400px;
-                height: 260px;
-            }
-
-            .blog-image {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                border-radius: 10px;
-            }
-
-            .b-image {
-                width: 100%;
-                height: 100%;
-                transition: all 800ms ease;
-            }
-
-            .single-blogs:hover .b-image {
-                transform: scale(1.2);
-            }
-
-            .blog-text {
-                width: 90%;
-                position: absolute;
-                top: 70%;
-                left: 50%;
-                padding: 28px 20px;
-                border-radius: 10px;
-                border-bottom-right-radius: 60px;
-                transform: translateX(-50%);
-                max-width: fit-content;
-                background-color: #fff;
-                box-shadow: 0 12px 48px rgba(0 0 0 / 10%);
-            }
-
-            .blog-text h3 {
-                margin: 16px 0 20px 0;
-            }
-
-            .blog-text a {
-                font-size: 24px;
-                font-weight: 600;
-            }
-
-            #message {
-                margin: 120px;
-            }
-
-            #message form {
-                display: flex;
-                flex-direction: column;
-                width: 75%;
-                margin: 0 auto;
-            }
-
-            form input,
-            form textarea {
-                outline: none;
-                padding: 16px;
-                border: 1px solid #c5c5c5;
-                margin: 24px 0;
-            }
-
-            form div {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            form div input {
-                width: 48%;
-            }
-
-            #send-message {
-                width: fit-content;
-                margin: 0 auto;
-                margin-top: 24px;
-                background-color: transparent;
+            @media (max-width: 768px) {
+                h5 {
+                    font-size: 1.25rem;
+                }
             }
         </style>
     </head>
-    <body>
-        <main>
-            <div class="navigation"></div>
 
-            <section class="page-heading">
-                <h1 data-aos="fade-in">Singel Blog Name</h1>
+    <body>
+        <!-- desktop view -->
+        <div class="d-none d-lg-block">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 data-aos="fade-in">blog name</h1>
             </section>
 
-            <section id="blog-container" data-aos="slide-up">
-                <div id="left">
-                    <figure>
-                        <img src="https://via.placeholder.com/760x325?text=blog+image" alt="" />
-                        <figcaption>
-                            <span id="user">👨‍💼 &nbsp;Admin</span> &nbsp;|&nbsp;
-                            <span id="date">📆 &nbsp;22 June, 2021</span>
-                        </figcaption>
-                    </figure>
-
-                    <div id="text">
-                        <h2>Web Development</h2>
-                        <p>
-                            We denounce with righteous indige nation and dislike men who are so beguiled and demo
-                            realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
-                            foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
-                            perfectly simple and easy to distinguish. In a free hour, when our power of choice is
-                            untrammelled data structures manages data in technology.
-                        </p>
-                        <br />
-                        <p>
-                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
-                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
-                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
-                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium data structures
-                            manages data.
-                        </p>
-                        <div id="quote">
-                            <p>
-                                Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus
-                                stadium data structures manages data lingo est igpay.
-                            </p>
-                        </div>
-                        <p>
-                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
-                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
-                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
-                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium data structures
-                            manages data.
-                        </p>
-
-                        <h3>Digital Technology on The Cutting Edge</h3>
-                        <p>
-                            We denounce with righteous indige nation and dislike men who are so beguiled and demo
-                            realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
-                            foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
-                            perfectly simple and easy to distinguish. In a free hour, when our power of choice is
-                            untrammelled data structures manages data in technology.
-                        </p>
-                        <br />
-                        <ul>
-                            <li><a href="#">How will digital activities impact traditional manufacturing.</a></li>
-                            <li><a href="#">All these digital elements and projects aim to enhance .</a></li>
-                            <li><a href="#">I monitor my staff with software that takes screenshots.</a></li>
-                            <li><a href="#">Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a></li>
-                            <li><a href="#">Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a></li>
-                        </ul>
+            <!-- Blog Details -->
+            <section id="blog-details" class="container pt-5 pb-2 mt-3">
+                <!-- image -->
+                <figure data-aos="zoom-out">
+                    <img width="100%" src="https://via.placeholder.com/1110x460" alt="" />
+                    <figcaption class="font-sb mt-4 text-muted">
+                        <small class="d-inline-block mb-0 pr-3 mr-2 border-right border-dark">
+                            👨‍💼 &nbsp;<span class="post-by">Admin</span>
+                        </small>
+                        <small class="d-inline-block mb-0">📆 &nbsp;<span class="post-date">22 June, 2021</span></small>
+                    </figcaption>
+                </figure>
+                <!-- title & details -->
+                <div class="my-5">
+                    <h4 class="font-sb text-capitalize mb-4" data-aos="fade">Website development</h4>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <div class="my-5 p-5 bg-light border-left border-dark" data-aos="fade">
+                        <h6 class="m-4 font-m">
+                            Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus
+                            stadium data structures manages data lingo est igpay.
+                        </h6>
                     </div>
-                    <br />
-                    <p>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <h6 class="font-sb my-3 pt-3" data-aos="fade">Digital Technology on The Cutting Edge</h6>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <ul class="styled-ul">
+                        <li data-aos="fade">
+                            <a href="#" class="d-inline-block pl-2 my-2"
+                                >How will digital activities impact traditional manufacturing.</a
+                            >
+                        </li>
+                        <li data-aos="fade">
+                            <a href="#" class="d-inline-block pl-2 my-2"
+                                >All these digital elements and projects aim to enhance .</a
+                            >
+                        </li>
+                        <li data-aos="fade">
+                            <a href="#" class="d-inline-block pl-2 my-2"
+                                >I monitor my staff with software that takes screenshots.</a
+                            >
+                        </li>
+                        <li data-aos="fade">
+                            <a href="#" class="d-inline-block pl-2 my-2"
+                                >Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a
+                            >
+                        </li>
+                        <li data-aos="fade">
+                            <a href="#" class="d-inline-block pl-2 my-2"
+                                >Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a
+                            >
+                        </li>
+                    </ul>
+                    <p data-aos="fade">
                         We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
                         by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
                         and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
@@ -244,92 +173,280 @@
                         data in technology.
                     </p>
                 </div>
-
-                <div id="tags">
-                    <div>
-                        <h3>Categories</h3>
-                        <small>Digital marketing</small>
+                <!-- categories & tags -->
+                <div class="mt-5 pt-5 text-capitalize border-top">
+                    <div data-aos="fade">
+                        <h6 class="font-sb">Categories</h6>
+                        <div class="categories mt-4 mb-2">
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border"
+                                >social media management</small
+                            >
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">SEO</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">social media ads</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">google ads</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">website development</small>
+                        </div>
                     </div>
-                    <div>
-                        <h3>Tags</h3>
-                        <small>Affiliate</small>
-                        <small>Process</small>
+                    <div class="mt-5" data-aos="fade">
+                        <h6 class="font-sb">Tags</h6>
+                        <div class="tags mt-3 mb-2">
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">website development</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border"
+                                >software development</small
+                            >
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="message">
-                <div class="heading" data-aos="slide-up">
-                    <h2>Leave a Reply</h2>
+            <!-- Message -->
+            <section id="message" class="container py-5">
+                <div class="text-uppercase text-center my-5 pb-3 font-xb" data-aos="slide-up">
+                    <h1>send us a message</h1>
                 </div>
-                <form data-aos="slide-up">
-                    <div>
-                        <input type="text" name="username" id="username" placeholder="Your full name" />
-                        <input type="email" name="useremail" id="useremail" placeholder="Your e-mail address" />
+                <form class="w-75 mx-auto" data-aos="slide-up">
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-6">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your full name"
+                            />
+                        </div>
+                        <div class="col-6">
+                            <input
+                                type="email"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your email address"
+                            />
+                        </div>
                     </div>
-                    <input type="url" name="userwebsiteurl" id="userwebsiteurl" placeholder="Your website / URL" />
-                    <textarea
-                        name="usermessage"
-                        id="usermessage"
-                        cols="30"
-                        rows="10"
-                        placeholder="Write your reply here"
-                    ></textarea>
-                    <button id="send-message">Post comment</button>
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-12">
+                            <input
+                                type="url"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your website / URL"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-5 pt-2">
+                        <textarea
+                            class="form-control"
+                            name="your-message"
+                            id="your-message"
+                            placeholder="Write your message here"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <button type="submit" class="btn btn-light w-25 mx-auto">Send Message</button>
+                        </div>
+                    </div>
                 </form>
             </section>
 
-            <section id="blogs">
-                <div class="heading" data-aos="slide-up">
-                    <h2>You May Also Like</h2>
+            <!-- Our Blogs -->
+            <section class="blogs-d"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- mobile view -->
+        <div class="d-lg-none position-relative">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 class="pt-5" data-aos="fade-in">blog name</h1>
+            </section>
+
+            <!-- Blog Details -->
+            <section id="blog-details" class="container py-md-5 pt-5 pb-4 mt-3">
+                <!-- image -->
+                <figure data-aos="zoom-out">
+                    <img width="100%" src="https://via.placeholder.com/690x310" alt="" />
+                    <figcaption class="font-sb mt-4 text-muted">
+                        <small class="d-inline-block mb-0 pr-3 mr-2 border-right border-dark">
+                            👨‍💼 &nbsp;<span class="post-by">Admin</span>
+                        </small>
+                        <small class="d-inline-block mb-0">📆 &nbsp;<span class="post-date">22 June, 2021</span></small>
+                    </figcaption>
+                </figure>
+                <!-- title & details -->
+                <div class="my-4">
+                    <h5 class="font-sb text-capitalize mb-3" data-aos="fade">Website development</h5>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <div class="my-4 p-4 bg-light border-left border-dark" data-aos="fade">
+                        <h6 class="m-4 font-m">
+                            Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus
+                            stadium data structures manages data lingo est igpay.
+                        </h6>
+                    </div>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <h6 class="font-sb my-3 pt-3" data-aos="fade">Digital Technology on The Cutting Edge</h6>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <ul class="styled-ul mt-4">
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">How will digital activities impact traditional manufacturing.</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">All these digital elements and projects aim to enhance .</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">I monitor my staff with software that takes screenshots.</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a>
+                        </li>
+                    </ul>
+                    <p data-aos="fade">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
                 </div>
-                <div id="all-blogs">
-                    <div class="single-blogs" data-aos="slide-up" data-aos-offset="200">
-                        <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
-                        </div>
-                        <div class="blog-text">
-                            <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                            <a href="#">→</a>
-                        </div>
-                    </div>
-                    <div class="single-blogs" data-aos="slide-up" data-aos-offset="200" data-aos-delay="100">
-                        <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
-                        </div>
-                        <div class="blog-text">
-                            <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                            <a href="#">→</a>
+                <!-- categories & tags -->
+                <div class="mt-5 pt-4 text-capitalize border-top">
+                    <div data-aos="fade">
+                        <h6 class="font-sb">Categories</h6>
+                        <div class="categories mt-4 mb-2">
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border"
+                                >social media management</small
+                            >
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">SEO</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">social media ads</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">google ads</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">website development</small>
                         </div>
                     </div>
-                    <div class="single-blogs" data-aos="slide-up" data-aos-offset="200" data-aos-delay="200">
-                        <div class="blog-image">
-                            <img class="b-image" src="https://via.placeholder.com/414x265" alt="" />
-                        </div>
-                        <div class="blog-text">
-                            <small>Personal / June 13, 2021</small>
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                            <a href="#">→</a>
+                    <div class="mt-4" data-aos="fade">
+                        <h6 class="font-sb">Tags</h6>
+                        <div class="tags mt-3 mb-2">
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border">website development</small>
+                            <small class="d-inline-block rounded-pill mb-2 py-1 px-2 border"
+                                >software development</small
+                            >
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div class="footer"></div>
-        </main>
+            <!-- Message -->
+            <section id="message" class="container py-5">
+                <div class="text-uppercase text-center mb-4 pb-3 font-xb" data-aos="slide-up">
+                    <h1>Send us a message</h1>
+                </div>
+                <form class="mx-auto" data-aos="slide-up">
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-12 mb-4">
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your full name"
+                            />
+                        </div>
+                        <div class="col-12">
+                            <input
+                                type="email"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your email address"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-4 pt-2 row">
+                        <div class="col-12">
+                            <input
+                                type="url"
+                                class="form-control"
+                                name="inputName"
+                                id="inputName"
+                                placeholder="Your website / URL"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-4 pt-2">
+                        <textarea
+                            class="form-control"
+                            name="your-message"
+                            id="your-message"
+                            placeholder="Write your message here"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <button type="submit" class="btn btn-light w-100 mx-auto">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
 
-        <!-- script -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <!-- Our Blogs -->
+            <section class="blogs-m"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Initialize Swiper -->
         <script>
-            $(".navigation").load("templates/nav.html");
+            // Add custom javascript and jquery here
+            $(".nav").load("templates/nav.html");
+            $(".services").load("templates/services.html");
+            $(".blogs-d").load("templates/blogs-d.html");
+            $(".blogs-m").load("templates/blogs-m.html");
             $(".footer").load("templates/footer.html");
         </script>
     </body>

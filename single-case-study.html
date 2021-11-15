@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Redirect -->
+        <script>
+            location.pathname !== "/triangular-dots/index.html" || location.pathname !== "/triangular-dots/"
+                ? location.replace("/triangular-dots/")
+                : console.log("home page");
+        </script>
+
+        <!-- Enter a proper page title here -->
+        <title>Triangular Dots</title>
+
+        <!-- CSS to include bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/aos.css" />
+        <!-- css to include style.css -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- required meta tags essential for seo and link sharing -->
+
+        <!-- Enter a proper description for the page in the meta description tag -->
+        <meta name="description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter a keywords for the page in tag -->
+        <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+        <!-- Enter Page title -->
+        <meta property="og:title" content="ENTER_PAGE_TITLE" />
+
+        <!-- Enter Page URL -->
+        <meta property="og:url" content="ENTER_PAGE_URL" />
+
+        <!-- Enter page description -->
+        <meta property="og:description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter Logo image URL for example : http://ww.example.com/images/logo.png -->
+        <meta property="og:image" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:secure_url" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+        <link rel="icon" href="ENTER_FAVICON_LOCATION" />
+
+        <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
+        <style>
+            #case-study-details {
+                position: relative;
+            }
+
+            #case-study-details p {
+                line-height: 1.8;
+            }
+
+            .brand-logo {
+                position: absolute;
+                left: 50%;
+                top: -120px;
+                transform: translateX(-50%);
+            }
+
+            @media (max-width: 768px) {
+                .brand-logo {
+                    top: -45px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- desktop view -->
+        <div class="d-none d-lg-block">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 data-aos="fade-in">case study name</h1>
+            </section>
+
+            <!-- Case Study Details -->
+            <section id="case-study-details" class="pt-5 pb-2 mt-5">
+                <!-- brand logo -->
+                <div class="brand-logo border border-dark">
+                    <img src="https://via.placeholder.com/144" alt="" />
+                </div>
+                <!-- row 1 -->
+                <div class="container text-center mt-5 pb-4" data-aos="fade-up">
+                    <h5 class="text-uppercase font-sb">case study</h5>
+                    <p class="w-50 mx-auto mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero exercitationem labore
+                        reiciendis animi corporis ex assumenda nulla harum hic magni!
+                    </p>
+                </div>
+                <!-- row 2 -->
+                <div class="container-fluid py-5 mt-5 bg-dark text-white">
+                    <div class="container my-5">
+                        <div class="col-lg-12 d-flex" data-aos="fade">
+                            <div class="col-lg-4 text-center">
+                                <h1 class="mb-3 font-sb">80%</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, expedita.</p>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <h1 class="mb-3 font-sb">80%</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, expedita.</p>
+                            </div>
+                            <div class="col-lg-4 text-center">
+                                <h1 class="mb-3 font-sb">80%</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, expedita.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row 3 -->
+                <div class="container mt-5 py-5">
+                    <div class="row">
+                        <div class="col-lg-6 mt-4">
+                            <h6 class="text-uppercase font-m" data-aos="fade">Lorem ipsum.</h6>
+                            <h4 class="my-3 text-capitalize font-b" data-aos="fade">Lorem ipsum dolor sit amet.</h4>
+                            <p data-aos="fade">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident tempore earum
+                                iusto perspiciatis accusamus sint, dignissimos molestias odio deserunt, vel rerum
+                                repellat dicta adipisci placeat nesciunt ipsam atque. Incidunt reiciendis ratione
+                                suscipit deserunt at a dolorum exercitationem esse itaque!
+                            </p>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade">
+                            <img width="100%" src="https://via.placeholder.com/540" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <!-- row 4 -->
+                <div class="container-fluid py-5 mt-5 bg-dark text-white">
+                    <div class="container text-center my-5">
+                        <h5 class="text-uppercase font-sb" data-aos="fade-up">case study</h5>
+                        <h5 class="text-capitalize font-m mt-3" data-aos="fade-up">Lorem ipsum dolor sit amet.</h5>
+                        <p class="w-75 mx-auto mt-3" data-aos="fade-up">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero exercitationem
+                            labore reiciendis animi corporis ex assumenda nulla harum hic magni!
+                        </p>
+                    </div>
+                </div>
+                <!-- row 5 -->
+                <div
+                    class="container-fluid d-flex align-items-center bg-image py-5 mt-5 bg-light"
+                    style="background-image: url('https://via.placeholder.com/1440x560'); height: 560px"
+                >
+                    <div class="container">
+                        <div class="row col-lg-12 align-items-start text-left my-5">
+                            <div class="col-lg-6" data-aos="fade">
+                                <!-- remove opacity after original image is added -->
+                                <img
+                                    style="opacity: 0.8"
+                                    width="100%"
+                                    src="https://via.placeholder.com/510x360/e5e5e5e"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="col-lg-6" data-aos="fade">
+                                <h5 class="text-uppercase font-sb">case study</h5>
+                                <h5 class="text-capitalize font-m mt-3">Lorem ipsum dolor sit amet.</h5>
+                                <p class="mt-3">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero
+                                    exercitationem labore reiciendis animi corporis ex assumenda nulla harum hic magni!
+                                </p>
+                                <p class="mt-3">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero
+                                    exercitationem labore reiciendis animi corporis ex assumenda nulla harum hic magni!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row 6 -->
+                <div class="container">
+                    <div class="row col-lg-11 mx-lg-auto text-left my-5 py-5">
+                        <div class="col-lg-12">
+                            <h5 class="text-center text-uppercase font-sb" data-aos="fade">case study</h5>
+                            <h5 class="text-center text-capitalize font-m mt-2 mb-5" data-aos="fade">
+                                Lorem ipsum dolor sit amet.
+                            </h5>
+                        </div>
+                        <div class="col-lg-6 pr-4" data-aos="fade">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi error voluptas
+                                assumenda quo perferendis dolore aliquid sed, mollitia rerum hic labore iusto, rem fuga!
+                                Omnis iusto ipsam repellat vero expedita quasi, libero, inventore soluta temporibus
+                                natus error. Neque dolorem eveniet eligendi aliquid optio qui assumenda sequi aperiam,
+                                facere adipisci vitae eaque. Assumenda, sunt. Vel aliquam quisquam sit dignissimos
+                                libero esse inventore illum exercitationem nihil, dolor a ratione similique, quo maxime
+                                atque! Expedita, optio dolore suscipit a iste praesentium laudantium.
+                            </p>
+                            <p class="mt-3">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi error voluptas
+                                assumenda quo perferendis dolore aliquid sed, mollitia rerum hic labore iusto, rem fuga!
+                                Omnis iusto ipsam repellat vero expedita quasi, libero, inventore soluta temporibus
+                                natus error. Neque dolorem eveniet eligendi aliquid optio qui assumenda sequi aperiam,
+                                facere adipisci vitae eaque. Assumenda, sunt. Vel aliquam quisquam sit dignissimos
+                                libero esse inventore illum exercitationem nihil, dolor a ratione similique, quo maxime
+                                atque! Expedita, optio dolore suscipit a iste praesentium laudantium.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 pl-4" data-aos="fade">
+                            <img width="100%" src="https://via.placeholder.com/360x640" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <!-- row 7 -->
+                <div
+                    class="container-fluid d-flex align-items-center bg-image py-5 mt-5 bg-light"
+                    style="
+                        background-image: url('https://via.placeholder.com/1440x560');
+                        background-attachment: fixed;
+                        height: 560px;
+                    "
+                >
+                    <div class="container">
+                        <div class="p-5 bg-light w-75 mx-auto" data-aos="zoom-in">
+                            <p class="font-sb">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus officia
+                                perferendis error repellendus ut distinctio ab et magni ipsam labore odio accusantium
+                                non qui nisi, quod odit officiis neque cupiditate cumque dicta temporibus similique.
+                                Inventore in minima nemo reiciendis.
+                            </p>
+                            <h6 class="mt-4 font-b">Harshal Singh</h6>
+                            <small>Lorem ipsum dolor sit amet.</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- row 8 -->
+                <div class="container text-center mt-5 pt-5">
+                    <h6 class="font-sb">Start advertising on Facebook or visit more case studies</h6>
+                    <div class="mt-4 font-m text-capitalize">
+                        <a class="btn btn-primary mr-3" href="#" role="button">Create an Ad</a>
+                        <a class="btn btn-primary" href="/case-studies.html" role="button">View all stories</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Blogs -->
+            <section class="blogs-d"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- mobile view -->
+        <div class="d-lg-none position-relative">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 class="pt-5" data-aos="fade-in">case study name</h1>
+            </section>
+
+            <!-- Case Study Details -->
+            <section id="case-study-details" class="pt-5">
+                <!-- brand logo -->
+                <div class="brand-logo border border-dark">
+                    <img src="https://via.placeholder.com/84" alt="" />
+                </div>
+                <!-- row 1 -->
+                <div class="container text-center mt-md-5 mt-4 pb-4" data-aos="fade-up">
+                    <h5 class="text-uppercase font-sb">case study</h5>
+                    <p class="mx-auto mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero exercitationem labore
+                        reiciendis animi corporis ex assumenda nulla harum hic magni!
+                    </p>
+                </div>
+                <!-- row 2 -->
+                <div class="container-fluid py-5 mt-md-5 mt-4 bg-dark text-white">
+                    <div class="container my-5">
+                        <div data-aos="fade">
+                            <div class="mb-5 pb-2 text-center">
+                                <h1 class="mb-3 font-sb">80%</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, expedita.</p>
+                            </div>
+                            <div class="mb-5 pb-2 text-center">
+                                <h1 class="mb-3 font-sb">80%</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, expedita.</p>
+                            </div>
+                            <div class="text-center">
+                                <h1 class="mb-3 font-sb">80%</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, expedita.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row 3 -->
+                <div class="container mt-md-5 mt-4 py-5">
+                    <div class="mb-4">
+                        <h6 class="text-uppercase font-m" data-aos="fade">Lorem ipsum.</h6>
+                        <h4 class="my-3 text-capitalize font-b" data-aos="fade">Lorem ipsum dolor sit amet.</h4>
+                        <p data-aos="fade">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident tempore earum iusto
+                            perspiciatis accusamus sint, dignissimos molestias odio deserunt, vel rerum repellat dicta
+                            adipisci placeat nesciunt ipsam atque. Incidunt reiciendis ratione suscipit deserunt at a
+                            dolorum exercitationem esse itaque!
+                        </p>
+                    </div>
+                    <div data-aos="fade">
+                        <img width="100%" src="https://via.placeholder.com/540" alt="" />
+                    </div>
+                </div>
+                <!-- row 4 -->
+                <div class="container-fluid py-5 mt-md-5 mt-4 bg-dark text-white">
+                    <div class="container text-center my-5">
+                        <h5 class="text-uppercase font-sb" data-aos="fade-up">case study</h5>
+                        <h5 class="text-capitalize font-m mt-3" data-aos="fade-up">Lorem ipsum dolor sit amet.</h5>
+                        <p class="mt-3" data-aos="fade-up">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero exercitationem
+                            labore reiciendis animi corporis ex assumenda nulla harum hic magni!
+                        </p>
+                    </div>
+                </div>
+                <!-- row 5 -->
+                <div
+                    class="container-fluid d-flex align-items-center bg-image py-5 mt-5 bg-light"
+                    style="background-image: url('https://via.placeholder.com/768'); height: 110vh"
+                >
+                    <div class="container">
+                        <div class="text-left">
+                            <div data-aos="fade">
+                                <!-- remove opacity after original image is added -->
+                                <img
+                                    style="opacity: 0.8"
+                                    width="100%"
+                                    src="https://via.placeholder.com/510x360/e5e5e5e"
+                                    alt=""
+                                />
+                            </div>
+                            <div class="mt-4" data-aos="fade">
+                                <h5 class="text-uppercase font-sb">case study</h5>
+                                <h5 class="text-capitalize font-m mt-3">Lorem ipsum dolor sit amet.</h5>
+                                <p class="mt-3">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero
+                                    exercitationem labore reiciendis animi corporis ex assumenda nulla harum hic magni!
+                                </p>
+                                <p class="mt-3">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet modi vero
+                                    exercitationem labore reiciendis animi corporis ex assumenda nulla harum hic magni!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- row 6 -->
+                <div class="container">
+                    <div class="text-left my-md-5 my-4 py-5">
+                        <div>
+                            <h5 class="text-center text-uppercase font-sb mt-4" data-aos="fade">case study</h5>
+                            <h5 class="text-center text-capitalize font-m mt-2 mb-5" data-aos="fade">
+                                Lorem ipsum dolor sit amet.
+                            </h5>
+                        </div>
+                        <div data-aos="fade">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi error voluptas
+                                assumenda quo perferendis dolore aliquid sed, mollitia rerum hic labore iusto, rem fuga!
+                                Omnis iusto ipsam repellat vero expedita quasi, libero, inventore soluta temporibus
+                                natus error. Neque dolorem eveniet eligendi aliquid optio qui assumenda sequi aperiam,
+                                facere adipisci vitae eaque. Assumenda, sunt. Vel aliquam quisquam sit dignissimos
+                                libero esse inventore illum exercitationem nihil, dolor a ratione similique, quo maxime
+                                atque! Expedita, optio dolore suscipit a iste praesentium laudantium.
+                            </p>
+                            <p class="mt-3 mb-4">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum eligendi error voluptas
+                                assumenda quo perferendis dolore aliquid sed, mollitia rerum hic labore iusto, rem fuga!
+                                Omnis iusto ipsam repellat vero expedita quasi, libero, inventore soluta temporibus
+                                natus error. Neque dolorem eveniet eligendi aliquid optio qui assumenda sequi aperiam,
+                                facere adipisci vitae eaque. Assumenda, sunt. Vel aliquam quisquam sit dignissimos
+                                libero esse inventore illum exercitationem nihil, dolor a ratione similique, quo maxime
+                                atque! Expedita, optio dolore suscipit a iste praesentium laudantium.
+                            </p>
+                        </div>
+                        <div data-aos="fade">
+                            <img width="100%" src="https://via.placeholder.com/360x640" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <!-- row 7 -->
+                <div
+                    class="container-fluid d-flex align-items-center bg-image py-5 mt-5 bg-light"
+                    style="
+                        background-image: url('https://via.placeholder.com/768x560');
+                        background-attachment: fixed;
+                        height: 560px;
+                    "
+                >
+                    <div class="p-md-5 p-4 bg-light mx-auto" data-aos="zoom-in">
+                        <p class="font-sb">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus officia perferendis
+                            error repellendus ut distinctio ab et magni ipsam labore odio accusantium non qui nisi, quod
+                            odit officiis neque cupiditate cumque dicta temporibus similique. Inventore in minima nemo
+                            reiciendis.
+                        </p>
+                        <h6 class="mt-4 font-b">Harshal Singh</h6>
+                        <small>Lorem ipsum dolor sit amet.</small>
+                    </div>
+                </div>
+                <!-- row 8 -->
+                <div class="container text-center mt-md-5 mt-4 py-5">
+                    <h6 class="font-sb">Start advertising on Facebook or visit more case studies</h6>
+                    <div class="mt-4 font-m text-capitalize">
+                        <a class="btn btn-primary mr-3" href="#" role="button">Create an Ad</a>
+                        <a class="btn btn-primary" href="/case-studies.html" role="button">View all stories</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Blogs -->
+            <section class="blogs-m"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            // Add custom javascript and jquery here
+            $(".nav").load("templates/nav.html");
+            $(".services").load("templates/services.html");
+            $(".blogs-d").load("templates/blogs-d.html");
+            $(".blogs-m").load("templates/blogs-m.html");
+            $(".footer").load("templates/footer.html");
+        </script>
+    </body>
+</html>

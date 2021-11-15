@@ -1,234 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Redirect -->
+        <!-- <script>
+            location.pathname !== "/triangular-dots/index.html" || location.pathname !== "/triangular-dots/"
+                ? location.replace("/triangular-dots/")
+                : console.log("home page");
+        </script> -->
+
+        <!-- Enter a proper page title here -->
         <title>Triangular Dots</title>
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+        <!-- CSS to include bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/aos.css" />
+        <!-- css to include style.css -->
         <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <!-- required meta tags essential for seo and link sharing -->
+
+        <!-- Enter a proper description for the page in the meta description tag -->
+        <meta name="description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter a keywords for the page in tag -->
+        <meta name="Keywords" content="ENTER_KEYWORDS_HERE" />
+
+        <!-- Enter Page title -->
+        <meta property="og:title" content="ENTER_PAGE_TITLE" />
+
+        <!-- Enter Page URL -->
+        <meta property="og:url" content="ENTER_PAGE_URL" />
+
+        <!-- Enter page description -->
+        <meta property="og:description" content="ENTER_PAGE_DESCRIPTION" />
+
+        <!-- Enter Logo image URL for example : http://ww.example.com/images/logo.png -->
+        <meta property="og:image" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:secure_url" itemprop="image" content="ENTER_IMAGE_URL" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
+        <meta property="og:type" content="website" />
+
+        <!-- Favicon location for example :  images/cropped-Fin-270x270.jpg -->
+        <link rel="icon" href="ENTER_FAVICON_LOCATION" />
+
+        <!-- Enter Page Specific CSS here. Please make sure all the CSS  -->
         <style>
-            #service-container {
-                margin: 120px;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 30px;
-            }
-
-            #left {
-                grid-column: 1/3;
-            }
-
-            #left img {
-                width: 100%;
+            .quote,
+            #service-details .bg-image {
                 border-radius: 10px;
             }
 
-            #left p {
-                line-height: 1.8;
+            #service-details p {
+                font-size: 15px;
+                line-height: 2;
             }
 
-            #text li {
+            .card-img-overlay {
+                background: rgba(0 0 0 / 40%);
+                transition: all 400ms ease;
+            }
+
+            .card-img-overlay:hover {
+                background: rgba(0 0 0 / 20%);
+            }
+
+            .styled-ul li {
                 list-style-type: "▶";
                 list-style-position: inside;
             }
 
-            #text li a {
-                display: inline-block;
-                margin: 10px;
-                padding: 0 20px;
-            }
-
-            #text h2 {
-                margin: 48px 0 28px 0;
-            }
-
-            #text h3 {
-                margin: 48px 0 24px 0;
-                font-weight: 500;
-            }
-
-            #quote {
-                width: 100%;
-                height: 240px;
-                border-radius: 10px;
-                margin: 40px 0;
-                padding: 0 80px;
-                display: grid;
-                place-items: center;
-                background-color: #efefef;
-            }
-
-            .side-heading {
-                width: 100%;
-                height: 105px;
-                background-color: #efefef;
-                display: grid;
-                align-items: center;
-                padding-left: 40px;
-                border-radius: 10px;
-                margin-bottom: 40px;
-            }
-
-            .single-other-services {
-                position: relative;
-                width: 100%;
-                height: 105px;
-                overflow: hidden;
-                border-radius: 10px;
-                margin-bottom: 20px;
-            }
-
-            .single-other-services img {
-                position: relative;
-                width: 100%;
-                height: 100%;
-            }
-
-            .single-other-services a {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-                display: grid;
-                align-items: center;
-                color: #fff;
-                font-size: 20px;
-                font-weight: 600;
-                padding: 0 40px;
-                background-color: rgba(0 0 0 / 50%);
-                transition: all 400ms ease;
-            }
-
-            .single-other-services a:hover {
-                background-color: rgba(0 0 0 / 0%);
-            }
-
-            #social-links {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            #social-links img {
-                border-radius: 5px;
-            }
-
-            #contac-number {
-                position: relative;
-                width: 100%;
-                height: 400px;
-                margin-top: 48px;
-                border-radius: 10px;
-                overflow: hidden;
-            }
-
-            #related-sub-services {
-                margin: 120px;
-            }
-
-            #related-sub-services h3 {
-                margin: 10px;
-                padding: 20px 40px;
-                max-width: fit-content;
-                display: inline-block;
-                background-color: #c5c5c5;
-            }
-
-            #contac-number::after {
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0 0 0 / 50%);
-            }
-
-            #contac-number img {
-                width: 100%;
-                height: 100%;
-            }
-
-            #contac-number a {
-                z-index: 1;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: #fff;
-                font-size: 24px;
-                font-weight: 600;
-            }
-
-            .blogs {
-                margin-bottom: 200px;
-            }
-
-            .blogs #blogs {
-                margin-top: -20px !important;
+            .border-rounded {
+                border-radius: 8px;
             }
         </style>
     </head>
-    <body>
-        <main>
-            <div class="navigation"></div>
 
-            <section class="page-heading">
-                <h1 data-aos="fade-in">Singel Service Name</h1>
+    <body>
+        <!-- desktop view -->
+        <div class="d-none d-lg-block">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 data-aos="fade-in">Service name</h1>
             </section>
 
-            <section id="service-container" data-aos="slide-up">
-                <div id="left">
-                    <img src="https://via.placeholder.com/760x325?text=service+image" alt="" />
-                    <div id="text">
-                        <h2>Web Development</h2>
-                        <p>
+            <!-- Service Details -->
+            <section id="service-details" class="container py-5 mt-3">
+                <div class="col-12 row">
+                    <!-- left -->
+                    <div class="col-8 pl-0">
+                        <div
+                            data-aos="zoom-out"
+                            class="bg-image bg-light"
+                            style="
+                                background-image: url('https://via.placeholder.com/705x320?text=service+image');
+                                height: 320px;
+                            "
+                        ></div>
+                        <h5 class="my-3 pt-3 font-sb" data-aos="fade-up">Website Development</h5>
+                        <p data-aos="fade-up">
                             We denounce with righteous indige nation and dislike men who are so beguiled and demo
                             realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
                             foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
                             perfectly simple and easy to distinguish. In a free hour, when our power of choice is
                             untrammelled data structures manages data in technology.
                         </p>
-                        <br />
-                        <p>
-                            Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium
-                            sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay
-                            atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratuitous octopus
-                            niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium data structures
-                            manages data.
-                        </p>
-
-                        <h3>Digital Technology on The Cutting Edge</h3>
-                        <p>
+                        <h6 class="font-sb my-3 pt-3" data-aos="fade-up">Digital Technology on The Cutting Edge</h6>
+                        <p data-aos="fade-up">
                             We denounce with righteous indige nation and dislike men who are so beguiled and demo
                             realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
                             foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
                             perfectly simple and easy to distinguish. In a free hour, when our power of choice is
                             untrammelled data structures manages data in technology.
                         </p>
-                        <br />
-                        <ul>
-                            <li><a href="#">How will digital activities impact traditional manufacturing.</a></li>
-                            <li><a href="#">All these digital elements and projects aim to enhance .</a></li>
-                            <li><a href="#">I monitor my staff with software that takes screenshots.</a></li>
-                            <li><a href="#">Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a></li>
-                            <li><a href="#">Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a></li>
+                        <ul class="styled-ul">
+                            <li data-aos="fade-up">
+                                <a href="#" class="d-inline-block pl-2 my-2"
+                                    >How will digital activities impact traditional manufacturing.</a
+                                >
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="#" class="d-inline-block pl-2 my-2"
+                                    >All these digital elements and projects aim to enhance .</a
+                                >
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="#" class="d-inline-block pl-2 my-2"
+                                    >I monitor my staff with software that takes screenshots.</a
+                                >
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="#" class="d-inline-block pl-2 my-2"
+                                    >Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a
+                                >
+                            </li>
+                            <li data-aos="fade-up">
+                                <a href="#" class="d-inline-block pl-2 my-2"
+                                    >Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a
+                                >
+                            </li>
                         </ul>
+                        <div class="quote my-5 p-5 bg-light" data-aos="zoom-in">
+                            <h6 class="mb-0 font-m">
+                                Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus
+                                stadium data structures manages data lingo est igpay.
+                            </h6>
+                        </div>
+                        <p data-aos="fade-up">
+                            We denounce with righteous indige nation and dislike men who are so beguiled and demo
+                            realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                            foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
+                            perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+                            untrammelled data structures manages data in technology.
+                        </p>
                     </div>
-                    <div id="quote">
-                        <h4>
+                    <!-- right -->
+                    <div class="col-4 pr-0">
+                        <!-- sub services -->
+                        <div class="border-rounded p-4 bg-light font-b text-capitalize" data-aos="fade-left">
+                            sub services
+                        </div>
+                        <div class="mt-4 mb-5" data-aos="fade-left">
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                        </div>
+                        <!-- follow us -->
+                        <div class="border-rounded p-4 bg-light font-b text-capitalize" data-aos="fade">follow us</div>
+                        <div class="mt-4 mb-5 d-flex justify-content-between flex-wrap" data-aos="fade">
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                        </div>
+                        <!-- contact -->
+                        <div class="card border-rounded mt-4 mb-5" data-aos="fade-up">
+                            <img
+                                class="card-img border-rounded"
+                                width="100%"
+                                src="https://via.placeholder.com/345"
+                                alt=""
+                            />
+                            <a
+                                href="tel:+918534598624"
+                                class="
+                                    card-img-overlay
+                                    border-rounded
+                                    text-white
+                                    d-flex
+                                    align-items-center
+                                    justify-content-center
+                                "
+                            >
+                                <h4 class="font-b">+91 85345 98624</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section class="services"></section>
+
+            <!-- Our Blogs -->
+            <section class="blogs-d"></section>
+
+            <!-- Footer -->
+            <div class="footer"></div>
+        </div>
+
+        <!-- mobile view -->
+        <div class="d-lg-none position-relative">
+            <!-- Navbar -->
+            <div class="nav"></div>
+
+            <!-- Heading -->
+            <section class="page-heading font-b">
+                <h1 class="pt-5" data-aos="fade-in">Service name</h1>
+            </section>
+
+            <!-- Service Details -->
+            <section id="service-details" class="container py-md-5 pt-5 pb-4 mt-3">
+                <!-- left -->
+                <div class="mb-5">
+                    <div data-aos="zoom-out" class="bg-light border-rounded overflow-hidden">
+                        <img
+                            class="border-rounded"
+                            width="100%"
+                            src="https://via.placeholder.com/705x320?text=service+image"
+                            alt=""
+                        />
+                    </div>
+                    <div data-aos="fade-up">
+                        <h5 class="my-3 pt-3 font-sb">Website Development</h5>
+                        <p>
+                            We denounce with righteous indige nation and dislike men who are so beguiled and demo
+                            realized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                            foresee the pain and trouble that are bound to ensue cannot foresee. These cases are
+                            perfectly simple and easy to distinguish. In a free hour, when our power of choice is
+                            untrammelled data structures manages data in technology.
+                        </p>
+                    </div>
+                    <h6 class="font-sb my-3 pt-3" data-aos="fade-up">Digital Technology on The Cutting Edge</h6>
+                    <p data-aos="fade-up">
+                        We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
+                        distinguish. In a free hour, when our power of choice is untrammelled data structures manages
+                        data in technology.
+                    </p>
+                    <ul class="styled-ul mt-4">
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">How will digital activities impact traditional manufacturing.</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">All these digital elements and projects aim to enhance .</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">I monitor my staff with software that takes screenshots.</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">Laoreet dolore magna niacin sodium glutimate aliquam hendrerit.</a>
+                        </li>
+                        <li class="mb-4" data-aos="fade-up">
+                            <a href="#">Minim veniam quis niacin sodium glutimate nostrud exerci dolor.</a>
+                        </li>
+                    </ul>
+                    <div class="quote my-5 p-md-5 px-4 py-5 bg-light" data-aos="zoom-in">
+                        <h6 class="mb-0 font-m">
                             Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus
                             stadium data structures manages data lingo est igpay.
-                        </h4>
+                        </h6>
                     </div>
-                    <br />
-                    <p>
+                    <p data-aos="fade-up">
                         We denounce with righteous indige nation and dislike men who are so beguiled and demo realized
                         by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
                         and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to
@@ -236,87 +357,151 @@
                         data in technology.
                     </p>
                 </div>
-                <div id="right">
-                    <h2 class="side-heading">Our Services</h2>
-                    <div id="our-other-services">
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Events, Meets & Exhibitions</a>
+                <!-- right -->
+                <div class="d-md-flex d-block overflow-hidden">
+                    <!-- sub services -->
+                    <div class="col-md-6 pr-md-3 px-0">
+                        <div class="border-rounded p-4 bg-light font-b text-capitalize" data-aos="zoom-in">
+                            sub services
                         </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Activations</a>
-                        </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Marketing Research</a>
-                        </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Retail Solution </a>
-                        </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Branding, Merchandising & Retail Fixture</a>
-                        </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Alliances & Channel Development Programs</a>
-                        </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Manpower Programme</a>
-                        </div>
-                        <div class="single-other-services">
-                            <img src="https://via.placeholder.com/370x105" alt="" />
-                            <a href="#">Digital Marketing</a>
+                        <div class="mt-4 mb-5" data-aos="fade-up">
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
+                            <a
+                                href="#"
+                                class="d-block border-rounded mb-3 p-4 bg-secondary text-white font-sb text-capitalize"
+                                style="background-image: url('https://via.placeholder.com/345x75')"
+                            >
+                                sub services
+                            </a>
                         </div>
                     </div>
-                    <br />
-                    <h2 class="side-heading">Follow Us</h2>
-                    <div id="social-links">
-                        <img src="https://via.placeholder.com/64" alt="" />
-                        <img src="https://via.placeholder.com/64" alt="" />
-                        <img src="https://via.placeholder.com/64" alt="" />
-                        <img src="https://via.placeholder.com/64" alt="" />
-                        <img src="https://via.placeholder.com/64" alt="" />
-                    </div>
-                    <div id="contac-number">
-                        <a href="tel:+91xxxxxxxxxx">+91 82644 76214</a>
-                        <img src="https://via.placeholder.com/400" alt="" />
+                    <!-- follow us -->
+                    <div class="col-md-6 pl-md-3 px-0">
+                        <div class="border-rounded p-4 bg-light font-b text-capitalize" data-aos="zoom-in">
+                            follow us
+                        </div>
+                        <div class="mt-4 mb-5 d-flex justify-content-between flex-wrap" data-aos="fade-up">
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg mr-1 mb-3"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                            <img
+                                width="56"
+                                height="56"
+                                class="rounded-lg"
+                                src="https://via.placeholder.com/56"
+                                alt=""
+                            />
+                        </div>
+                        <!-- contact -->
+                        <div class="card border-rounded mt-4 mb-5" data-aos="fade">
+                            <img
+                                class="card-img border-rounded"
+                                width="100%"
+                                src="https://via.placeholder.com/345"
+                                alt=""
+                            />
+                            <a
+                                href="tel:+918534598624"
+                                class="
+                                    card-img-overlay
+                                    border-rounded
+                                    text-white
+                                    d-flex
+                                    align-items-center
+                                    justify-content-center
+                                "
+                            >
+                                <h4 class="font-b">+91 85345 98624</h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="related-sub-services">
-                <div class="heading" data-aos="slide-up">
-                    <h2>sub services</h2>
-                </div>
-                <div>
-                    <h3>Social Media Management</h3>
-                    <h3>Social Media Ads</h3>
-                    <h3>SEO</h3>
-                    <h3>Website Development</h3>
-                    <h3>Google Ads</h3>
-                </div>
-            </section>
+            <!-- Services -->
+            <section class="services"></section>
 
-            <div class="blogs"></div>
+            <!-- Our Blogs -->
+            <section class="blogs-m"></section>
 
+            <!-- Footer -->
             <div class="footer"></div>
-        </main>
+        </div>
 
-        <!-- script -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/aos.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Initialize Swiper -->
         <script>
-            $(".navigation").load("templates/nav.html");
-            $(".blogs").load("templates/blogs.html");
+            // Add custom javascript and jquery here
+            $(".nav").load("templates/nav.html");
+            $(".services").load("templates/services.html");
+            $(".blogs-d").load("templates/blogs-d.html");
+            $(".blogs-m").load("templates/blogs-m.html");
             $(".footer").load("templates/footer.html");
         </script>
     </body>
