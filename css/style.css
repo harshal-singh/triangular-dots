@@ -1,6 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* AzoSans */
+@font-face {
+    font-family: azosans-l;
+    src: url(../fonts/AzoSans-Light.ttf);
+    font-display: swap;
+}
+
+.font-azosans-l {
+    font-family: azosans-l;
+}
+
+/* Montserrat */
 @font-face {
     font-family: montserrat-xb;
     src: url(../fonts/Montserrat-ExtraBold.ttf);
@@ -57,9 +69,17 @@
     box-sizing: border-box;
 }
 
+/* ------------------------ swiper ------------------------ */
+
+:root {
+    --red: #ff0000;
+    --black: #252525;
+}
+
 /* ------------------------ body ------------------------ */
 
 body {
+    color: var(--black);
     user-select: none;
     scroll-behavior: smooth;
     font-family: montserrat-r;
@@ -69,11 +89,11 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #353535;
+    color: var(--black);
 }
 
 .swiper-pagination-bullet-active {
-    background: #353535;
+    background: var(--black);
 }
 
 /* ------------------------ a ------------------------ */
@@ -152,7 +172,8 @@ nav.nav-fixed {
     content: "";
     width: 160px;
     height: 18px;
-    background-image: radial-gradient(#272727 20%, transparent 20%), radial-gradient(#272727 20%, transparent 20%);
+    background-image: radial-gradient(var(--black) 20%, transparent 20%),
+        radial-gradient(var(--black) 20%, transparent 20%);
     background-size: 6px 6px;
 }
 
@@ -247,6 +268,10 @@ nav.nav-fixed {
 /* ------------------------ media 992 ------------------------ */
 
 @media (max-width: 992px) {
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
     /* blogs */
     #all-blogs {
         grid-template-columns: repeat(2, 1fr);
@@ -261,7 +286,6 @@ nav.nav-fixed {
     nav {
         padding-top: 24px !important;
         padding-bottom: 24px !important;
-        background-color: #fff;
     }
 
     nav.nav-fixed {

@@ -54,9 +54,16 @@
                 height: 100%;
             }
 
-            .banner-text h2 {
+            /* Banner Text */
+            .banner-text h2,
+            .banner-text h4 {
+                font-family: azosans-l;
                 line-height: 1.5;
-                letter-spacing: 2px;
+                letter-spacing: 4px;
+            }
+
+            .banner-text span {
+                color: var(--red);
             }
 
             /* Our Partner */
@@ -188,6 +195,11 @@
             }
 
             @media (max-width: 768px) {
+                .banner-text h4 {
+                    width: 75%;
+                    margin: 0 auto;
+                }
+
                 .single-number-counter {
                     max-width: 100%;
                 }
@@ -198,6 +210,10 @@
             }
 
             @media (max-width: 480px) {
+                .banner-text h4 {
+                    width: 95%;
+                }
+
                 #our-partners img {
                     width: 90px;
                 }
@@ -250,12 +266,14 @@
                             style="background-image: url('images/banner/banner_1.jpg')"
                         >
                             <div class="banner-text text-center text-uppercase pt-4">
-                                <h2 class="font-b text-white my-5" data-aos="fade-up">
+                                <h2 class="text-white my-5" data-aos="fade-up">
                                     connecting the dots from <br />
-                                    <span class="text-danger">retail</span> to
-                                    <span class="text-danger">global.</span>
+                                    <span>retail</span> to
+                                    <span>global.</span>
                                 </h2>
-                                <button class="btn btn-light text-uppercase">Connect now</button>
+                                <button class="btn btn-light text-uppercase" data-aos="fade-up" data-aos-delay="600">
+                                    Connect now
+                                </button>
                             </div>
                         </div>
                         <div
@@ -664,13 +682,15 @@
                             class="swiper-slide bg-image d-flex align-items-center justify-content-center"
                             style="background-image: url('images/banner/banner_1.jpg')"
                         >
-                            <div class="banner-text text-center text-uppercase">
-                                <h4 class="font-b text-white my-5" data-aos="fade-up">
+                            <div class="container banner-text text-center text-uppercase">
+                                <h4 class="font-azosans-l text-white my-5" data-aos="fade-up">
                                     connecting the dots from
                                     <span class="text-danger">retail</span> to
                                     <span class="text-danger">global.</span>
                                 </h4>
-                                <button class="btn btn-light text-uppercase">Connect now</button>
+                                <button class="btn btn-light text-uppercase" data-aos="fade-up" data-aos-delay="600">
+                                    Connect now
+                                </button>
                             </div>
                         </div>
                         <div
