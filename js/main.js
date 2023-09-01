@@ -1,9 +1,9 @@
 "use strict";
 
-if (location.pathname !== "/" && location.pathname !== "/triangular-dots/") {
-    $("body").html("");
-    location.replace("notification.html");
-} else {
+// if (location.pathname !== "/" && location.pathname !== "/triangular-dots/") {
+//     $("body").html("");
+//     location.replace("notification.html");
+// } else {
     AOS.init({
         once: false,
         duration: 1500,
@@ -31,4 +31,4 @@ if (location.pathname !== "/" && location.pathname !== "/triangular-dots/") {
             );
         }
     });
-}
+// }
