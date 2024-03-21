@@ -222,7 +222,6 @@ nav.nav-fixed {
     border-radius: 10px;
     border-bottom-right-radius: 48px;
     transform: translateX(-50%);
-    max-width: fit-content;
     background-color: #fff;
 }
 
